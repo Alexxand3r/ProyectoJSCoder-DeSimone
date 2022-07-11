@@ -1,0 +1,28 @@
+body {
+  font-family: 'Secular One', sans-serif;
+}
+
+.header {
+  background-color: blue;
+}
+
+.boton_orden {
+  background-color: blue;
+  color: white;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  border: 2px solid aqua;
+}
+.boton_orden:hover {
+  background-color: aqua;
+  border: 2px solid blue;
+}
+
+.modal_orden {
+  border-radius: 25px;
+  border: 2px solid blue;
+}
+
+h2.modal-title {
+  font-size: 2rem;
+}
