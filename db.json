@@ -1,0 +1,98 @@
+{
+  "platos": [
+    {
+      "id": 1,
+      "nombre": "Pizza Muzzarella x6",
+      "precio": 900,
+      "categoria": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Pizza  Muzzarella x10",
+      "precio": 1550,
+      "categoria": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Pizza Especial x6",
+      "precio": 1370,
+      "categoria": 1
+    },
+    {
+      "id": 4,
+      "nombre": "Pizza Especial x10",
+      "precio": 2100,
+      "categoria": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Papas Fritas",
+      "precio": 950,
+      "categoria": 1
+    },
+
+    {
+      "id": 6,
+      "nombre": "Gaseosa 500 ml",
+      "precio": 250,
+      "categoria": 2
+    },
+
+    {
+      "id": 7,
+      "nombre": "Cerveza",
+      "precio": 500,
+      "categoria": 2
+    },
+    {
+      "id": 8,
+      "nombre": "Agua Saborizada 1litro",
+      "precio": 410,
+      "categoria": 2
+    },
+    {
+      "id": 9,
+      "nombre": "Café doble",
+      "precio": 190,
+      "categoria": 2
+    },
+    {
+      "id": 10,
+      "nombre": "Café Capuchino",
+      "precio": 390,
+      "categoria": 2
+    },
+    {
+      "id": 11,
+      "nombre": "Porción Selva Negra",
+      "precio": 450,
+      "categoria": 3
+    },
+
+    {
+      "id": 12,
+      "nombre": "Helado 1/4kg",
+      "precio": 350,
+      "categoria": 3
+    },
+
+    {
+      "id": 13,
+      "nombre": "Porción ChocoTorta",
+      "precio": 530,
+      "categoria": 3
+    },
+    {
+      "id": 14,
+      "nombre": "Frutillas a la Crema",
+      "precio": 700,
+      "categoria": 3
+    },
+    {
+      "id": 15,
+      "nombre": "Flan",
+      "precio": 450,
+      "categoria": 3
+    }
+  ]
+}
