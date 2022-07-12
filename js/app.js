@@ -31,13 +31,6 @@ console.log(arr1);
 
 //--------------------------------------------------------------------------------------------
 
-const existe = menu.some(producto => producto.nombre === 'Papas Fritas');
-console.log(existe);
-
-if (existe === true) {
-  console.log('Sale Con Fritas🍟😝');
-}
-
 let total = 0;
 function agregarPlato(precio) {
   return (total += precio);
@@ -69,12 +62,35 @@ console.log(
 let total2 = 0;
 const mesa = [
   { nombre: 'Pizza Muzzarella x6', precio: 900 },
-  { nombre: 'Papas  Fritas', precio: 950 },
+  { nombre: 'Papas Fritas', precio: 950 },
   { nombre: 'Cerveza', precio: 500 },
 ];
 
-mesa.forEach(producto => (total2 += producto.precio));
-console.log(`El consumo total fue :  💲${total2}`);
+const existe = mesa.some(producto => producto.nombre === 'Papas Fritas');
+console.log(existe);
+
+if (existe === true) {
+  console.log('Sale Con Fritas🍟😝');
+}
+
+//se pide una Gaseosa 500 ml'
+const productoAgrega = { nombre: 'Gaseosa 500 ml', precio: 250 };
+const mesa2 = [...mesa, productoAgrega];
+console.log(mesa2);
+
+//le descontamos la cerveza 😝
+let sinCerveza;
+sinCerveza = mesa2.find(producto => producto.nombre === 'Cerveza');
+console.log(sinCerveza);
+sinCerveza = mesa2.filter(producto => producto.nombre !== 'Cerveza');
+console.table(sinCerveza);
+
+mesa2.forEach(producto => (total2 += producto.precio));
+console.log(`El subtotal a Pagar :  💲${total2}`);
+
+//total guarda el valor acumulado por lo q no usa += e inicia en 0
+let total3 = sinCerveza.reduce((total, producto) => total + producto.precio, 0);
+console.log(`total c/descuento :  💲${total3}`);
 
 /* 
 
