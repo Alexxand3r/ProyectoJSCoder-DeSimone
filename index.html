@@ -15,22 +15,80 @@
 </head>
 
 <body>
+
+  <!-- header-->
   <header class="py-4 header">
-    <h1 class="text-center text-white fs-2">WaiterApp <span class="icono_logo " rounded-circle""><img width="45"
+    <h1 class="text-center text-white fs-2">Waiter App <span class="icono_logo rounded-circle"><img width="45"
           src="img/waitress.svg" alt="icono mozo"></span>
     </h1>
-
   </header>
+
+  <!--Boton cargar mesa-->
+
   <div class="d-flex mt-4 justify-content-center ">
     <button data-bs-toggle="modal" data-bs-target="#formulario" type="button"
-      class="btn  boton_orden rounded-pill"><span><img width="45" src="img/menu.svg" alt="imagen menu"></span>Cargar
-      Mesa </button>
+      class="btn  boton_orden rounded-pill"><span class="me-1"><img width="55" src="img/menu.svg"
+          alt="imagen menu"></span>Cargar Mesa </button>
   </div>
-  <div class="d-flex mt-4 justify-content-center ">
+
+  <!-- Modal Cargar Mesa -->
+  <div class="modal fade" id="formulario">
+    <div class="modal-dialog">
+      <div class="modal-content modal_orden">
+        <div class="modal-header">
+          <h2 class="modal-title"> Cargar Mesa <img width="40" src="img/waiter-icon.svg" alt="icono mozo"></h2>
+          <button type=" button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label"><img class="mb-2" width="35" src="img/mesa.svg" alt="icono mesa"> Mesa N° :
+              </label>
+              <input id="mesa" type="number" class="form-control rounded-pill p-2" min="1" max="8">
+            </div>
+            <div class="mb-3">
+              <label class="form-label"><img width="35" src="img/fork-tiempo.svg" alt="icono tiempo de inicio"> Hora :
+              </label>
+              <input id="hora" type="time" class="form-control rounded-pill p-2">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary rounded-pill p-3" data-bs-dismiss="modal">Cerrar</button>
+          <button id="guardar-cliente" type="button" class="btn btn-primary rounded-pill p-3">Abrir Mesa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!--Boton Cambio Divisas-->
+
+  <div class="d-flex mt-4 justify-content-center">
+    <button type="button" class="btn  boton_orden rounded-pill"><img class="me-2 py-1" width="45" src="img/divisa.svg"
+        alt="imagen cambio de divisas">Cambio divisas</button>
+  </div>
+
+
+  <!-- Boton Calculadora -->
+
+
+  <div class="d-flex mt-4 justify-content-center">
     <button data-bs-toggle="modal" data-bs-target="#calculadora" type="button"
-      class="btn  boton_orden rounded-pill"><span><img width="45" src="img/calculator.svg"
-          alt="imagen menu"></span></button>
+      class="btn  boton_orden rounded-pill me-2"><span><img width="50" src="img/calculator.svg"
+          alt="imagen Calculadora"></span></button>
+
+    <!--Boton Traductor-->
+
+    <button type="button" class="btn  boton_orden rounded-pill ms-2"><span><img width="50" src="img/traductor.svg"
+          alt="imagen traductor"></span></button>
   </div>
+
 
   <main id="menu" class="container bg-light mt-5 p-4 d-none">
     <h2 class="text-center my-4">Menú</h2>
@@ -47,33 +105,7 @@
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="formulario">
-    <div class="modal-dialog">
-      <div class="modal-content modal_orden">
-        <div class="modal-header">
-          <h2 class="modal-title">Cargar Mesa</h2>
-          <button type=" button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Mesa</label>
-              <input id="mesa" type="number" class="form-control rounded-pill p-2" min="1" max="8">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Hora</label>
-              <input id="hora" type="time" class="form-control rounded-pill p-2">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary rounded-pill p-3" data-bs-dismiss="modal">Cerrar</button>
-          <button id="guardar-cliente" type="button" class="btn btn-primary rounded-pill p-3">Abrir Mesa</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <footer class="footer_estilos">
 

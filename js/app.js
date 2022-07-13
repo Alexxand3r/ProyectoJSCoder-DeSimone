@@ -112,13 +112,23 @@ herramientas:
 //calculadora
 //conversor de divisas - Dólar/Reales/pesos chilenos/bitcoin
 //recetas?
+
+simulaciones:
+//Envió y validación de Email?
+
+//crear una api o bd falsa para testeo y consulta.
+
+*maquetado
+*interfaz visual UX / Ui 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-//crear una api o bd falsa para testeo y consulta.
+
 
 //variables
 /*
