@@ -100,6 +100,7 @@ console.log(`total c/descuento :  💲${total3}`);
 //funcionalidades iniciales/requerimientos iniciales
 
 validación de campos ventana modal
+
 Menu:  AGREGAR/MOSTRAR/ELIMINAR  
 
 Resumen de consumo  MOSTRAR DATOS MODAL(Mesa/hora) / CONSUMO / ELIMINAR
@@ -108,19 +109,27 @@ Propina:  CALCULAR  5% 10% 25%
 
 //mostrar SubTotal /  Propina  / Total a Pagar
 
-herramientas:
+herramientas extras:
+
+//botón dark mode
 //calculadora
-//conversor de divisas - Dólar/Reales/pesos chilenos/bitcoin
-//recetas?
+//conversor de divisas - Dólar/Reales/pesos chilenos/bitcoin(API?)
+//recetas?(API)
 
 simulaciones:
+
 //Envió y validación de Email?
 
-//crear una api o bd falsa para testeo y consulta.
 
+Tareas:
+
+*crear una api o bd falsa para testeo y consulta/json-server
+*construir modal con javascript
+---------------------------------------------------------------------------------------------
+*Cargar imágenes // ordenar archivos
 *maquetado
 *interfaz visual UX / Ui 
-
+*responsive / Mobil first
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 
