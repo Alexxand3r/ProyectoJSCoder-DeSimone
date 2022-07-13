@@ -5,6 +5,19 @@ body {
 .header {
   background-color: blue;
 }
+.icono_logo {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.icono_logo img {
+  margin-bottom: 0.8rem;
+  margin-right: 0.2rem;
+}
+footer {
+  margin-top: 7rem;
+  background-color: black;
+}
 
 .boton_orden {
   background-color: blue;

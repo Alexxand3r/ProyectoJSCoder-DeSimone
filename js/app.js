@@ -92,6 +92,9 @@ console.log(`El subtotal a Pagar :  💲${total2}`);
 let total3 = sinCerveza.reduce((total, producto) => total + producto.precio, 0);
 console.log(`total c/descuento :  💲${total3}`);
 
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
+
 /* 
 
 //funcionalidades iniciales/requerimientos iniciales
@@ -104,7 +107,16 @@ Resumen de consumo  MOSTRAR DATOS MODAL(Mesa/hora) / CONSUMO / ELIMINAR
 Propina:  CALCULAR  5% 10% 25%
 
 //mostrar SubTotal /  Propina  / Total a Pagar
+
+herramientas:
+//calculadora
+//conversor de divisas - Dólar/Reales/pesos chilenos/bitcoin
+//recetas?
 */
+
+/*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 //crear una api o bd falsa para testeo y consulta.
 
