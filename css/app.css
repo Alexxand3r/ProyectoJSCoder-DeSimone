@@ -1,9 +1,13 @@
+/* variables */
+
+/* globales */
+
 body {
   font-family: 'Secular One', sans-serif;
 }
 
 .header {
-  background-color: blue;
+  background-color: #0026fa;
 }
 .icono_logo {
   background-color: white;
@@ -14,20 +18,23 @@ body {
   margin-bottom: 0.8rem;
   margin-right: 0.2rem;
 }
+
 footer {
   margin-top: 7rem;
   background-color: black;
 }
 
+/* CARGAR MESA */
+
 .boton_orden {
-  background-color: blue;
+  background-color: #0026fa;
   color: white;
   text-transform: uppercase;
   padding: 1.5rem;
   border: 2px solid aqua;
 }
 .boton_orden:hover {
-  background-color: aqua;
+  background-color: #19a6fc;
   border: 2px solid blue;
 }
 
@@ -38,4 +45,80 @@ footer {
 
 h2.modal-title {
   font-size: 2rem;
+}
+
+/*   botón Dark Mode   */
+
+.btn-light {
+  color: black;
+  background-color: azure;
+  border: 1px solid black;
+}
+.btn-light:hover {
+  color: white;
+  background-color: black;
+}
+.botonDM {
+  margin-left: 0.5rem;
+  margin-top: 0.4rem;
+  border-radius: 45%;
+}
+.botonDM:hover {
+  color: white;
+  background-color: black;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.867);
+}
+
+/* CALCULADORA */
+
+.calculadora {
+  height: 600 px;
+  width: 400px;
+  background-color: #1d1d1d;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: aliceblue;
+}
+
+.resultado_barra {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.resultado_barra span {
+  font-size: 70px;
+}
+
+.controles_calculadora {
+  height: 390px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 97.7px);
+  grid-gap: 3px;
+}
+
+.calculadora input {
+  font-size: 30px;
+  color: aliceblue;
+  border: none;
+}
+
+.calculadora input:focus {
+  outline: none;
+  border-color: #111111;
+}
+
+.calculadora input:hover {
+  filter: brightness(110%);
 }
