@@ -1,5 +1,7 @@
 'use strict';
 
+//Calculadora
+
 //variables
 
 const darkMode = document.getElementById('darkMode');
@@ -21,6 +23,7 @@ function cambiarModo() {
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
+
 /* 
 
 //funcionalidades iniciales/requerimientos iniciales
