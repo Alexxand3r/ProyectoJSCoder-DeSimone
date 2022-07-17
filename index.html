@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto CoderHouse</title>
+  <title>ProyectoJS CoderHouse</title>
   <link rel="shortcut icon" href="img/js-icono.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +14,10 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body id="body" class="prueba">
+<body id="body" class="">
 
   <!-- header-->
-  <header class="py-4 header">
+  <header class="py-4 header border border-3 border-success">
     <h1 class="text-center text-white fs-2">Waiter App <span class="icono_logo rounded-circle"><img width="45"
           src="img/waitress.svg" alt="icono mozo"></span>
     </h1>
@@ -31,80 +31,56 @@
       class="btn  botonDM border border-primary">Dark</button>
   </div>
 
-
-  <!--Calculadora-->
-
-
-
+  <!--CARGAR MESA-->
 
   <!--Boton cargar mesa-->
 
   <div class="d-flex mt-4 justify-content-center ">
     <button data-bs-toggle="modal" data-bs-target="#formulario" type="button"
-      class="btn  boton_orden rounded-pill"><span class="me-1"><img width="55" src="img/menu.svg"
-          alt="imagen menu"></span>Cargar Mesa </button>
+      class="btn border border-3 border-success boton_orden rounded-pill"><span class="me-1"><img width="55"
+          src="img/menu.svg" alt="imagen menu"></span>Cargar Mesa </button>
   </div>
 
   <!-- Modal Cargar Mesa -->
+
   <div class="modal fade" id="formulario">
     <div class="modal-dialog">
-      <div class="modal-content modal_orden">
+      <div class="modal-content modal_orden border border-3 border-success">
         <div class="modal-header">
-          <h2 class="modal-title"> Cargar Mesa <img width="40" src="img/waiter-icon.svg" alt="icono mozo"></h2>
+          <h2 class="modal-title bg-success p-2 rounded-pill ms-1"> Cargar Mesa <img width="40"
+              src="img/waiter-icon.svg" alt="icono mozo">
+          </h2>
           <button type=" button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body bg-light">
           <form>
             <div class="mb-3">
-              <label class="form-label"><img class="mb-2" width="35" src="img/mesa.svg" alt="icono mesa"> Mesa N° :
+              <label class="form-label bg-success p-2 rounded-pill"><img class="mb-2" width="35" src="img/mesa.svg"
+                  alt="icono mesa"> Mesa N° :
               </label>
               <input id="mesa" type="number" class="form-control rounded-pill p-2" min="1" max="8">
             </div>
             <div class="mb-3">
-              <label class="form-label"><img width="35" src="img/fork-tiempo.svg" alt="icono tiempo de inicio"> Hora :
+              <label class="form-label bg-success p-2 rounded-pill"><img width="35" src="img/fork-tiempo.svg"
+                  alt="icono tiempo de inicio"> Hora :
               </label>
               <input id="hora" type="time" class="form-control rounded-pill p-2">
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary rounded-pill p-3" data-bs-dismiss="modal">Cerrar</button>
-          <button id="guardar-cliente" type="button" class="btn btn-primary rounded-pill p-3">Abrir Mesa</button>
+          <button type="button" class="btn btn-danger rounded-pill p-3" data-bs-dismiss="modal">Cerrar</button>
+          <button id="guardar-cliente" type="button"
+            class="btn border border-3 border-success btn-success rounded-pill p-3">Abrir Mesa</button>
         </div>
       </div>
     </div>
   </div>
 
-
-
-
-
-
-
-  <!--Boton Cambio Divisas-->
-
-  <div class="d-flex mt-4 justify-content-center">
-    <button type="button" class="btn  boton_orden rounded-pill"><img class="me-2 py-1" width="45" src="img/divisa.svg"
-        alt="imagen cambio de divisas">Cambio divisas</button>
-  </div>
-
-
-  <!-- Boton Calculadora -->
-
-
-  <div class="d-flex mt-4 justify-content-center">
-    <button data-bs-toggle="modal" data-bs-target="#calculadora" type="button"
-      class="btn  boton_orden rounded-pill me-2"><span><img width="50" src="img/calculator.svg"
-          alt="imagen Calculadora"></span></button>
-
-    <!--Boton Traductor-->
-
-    <button type="button" class="btn  boton_orden rounded-pill ms-2"><span><img width="50" src="img/traductor.svg"
-          alt="imagen traductor"></span></button>
-  </div>
-
+  <!--contenido menu-->
 
   <main id="menu" class="container bg-light mt-5 p-4 d-none">
+
     <h2 class="text-center my-4">Menú</h2>
 
     <div class="contenido"></div>
@@ -119,16 +95,131 @@
     </div>
   </section>
 
+  <!--CAMBIO DIVISAS-->
+
+  <!--Boton Cambio Divisas-->
+
+  <div class="d-flex mt-4 justify-content-center">
+    <button type="button" class="btn border border-3 border-success boton_orden rounded-pill"><img class="me-2 py-1"
+        width="45" src="img/divisa.svg" alt="imagen cambio de divisas">Cambio divisas</button>
+  </div>
 
 
-  <footer class="footer_estilos d-flex justify-content-center align-items-center">
+  <!--CALCULADORA-->
 
-    <h3 class="me-4 mt-4 text-white fs-2">Alexander De Simone</h3>
-    <img class="imagen_logo img-fluid" src="img/unnamed.png" alt="logo CoderHouse">
+  <!-- Boton Calculadora -->
+
+
+  <div class="d-flex mt-4 justify-content-center">
+
+
+    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+      aria-controls="offcanvasScrolling"
+      class="border border-3 border-success rounded-pill  boton_orden me-2"><span><img width="50"
+          src="img/calculator.svg" alt="imagen Calculadora"></span></button>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+      id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header bg-light">
+        <h5 class="offcanvas-title fs-4 dark bg-success p-2 rounded-pill ms-3" id="offcanvasScrollingLabel"> No
+          Pierdas
+          la
+          Cuenta!! 😁
+        </h5>
+        <button type="button" class="btn-close dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body contenedor_calculadora bg-light">
+        <div class="calculadora">
+          <div class="pantalla_calculadora" id="calculadoraFondo">
+            <span id="display">0</span>
+          </div>
+
+          <button class="col_2-calculadora" id="borrarDisplay">C</button>
+          <button class="borrar_calculadora" alt="porcentaje" id="porcentaje">%</button>
+
+          <button class="operador_calculadora" alt="dividido" id="dividido">/</button>
+          <button class="numero_calculadora" alt="7" id="7">7</button>
+          <button class="numero_calculadora" alt="8" id="8">8</button>
+          <button class="numero_calculadora" alt="9" id="9">9</button>
+          <button class="operador_calculadora" alt="por" multiplica" id="por">x</button>
+          <button class="numero_calculadora" alt="4" id="4">4</button>
+          <button class="numero_calculadora" alt="5" id="5">5</button>
+          <button class="numero_calculadora" alt="6" id="6">6</button>
+          <button class="operador_calculadora" alt="menos" id="menos">-</button>
+          <button class="numero_calculadora" alt="1" id="1">1</button>
+          <button class="numero_calculadora" alt="2" id="2">2</button>
+          <button class="numero_calculadora" alt="3" id="3">3</button>
+          <button class="operador_calculadora" alt="mas" id="mas">+</button>
+          <button class="numero_calculadora " alt="0" id="0">0</button>
+          <button class="numero_calculadora" alt="punto" id="punto">.</button>
+          <button class="resultado_calculadora col_2-calculadora" alt="igual" id="igual">=</button>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--TRADUCTOR-->
+
+    <!--Boton Traductor-->
+
+    <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden ms-2"><span><img
+          width="50" src="img/traductor.svg" alt="imagen traductor"></span></button>
+  </div>
+
+
+  <!--AGREGAR NOTAS-->
+
+  <div id="contenido">
+    <div class="container-xl">
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <label for="notas">
+            <h1>Notas:</h1>
+          </label>
+          <form id="formulario-notas">
+            <label for="notas"></label>
+            <textarea id="notas" rows="5" class="w-100 rounded-4  border border-3 border-success"></textarea>
+            <input type="submit" class="btn  border border-3 border-success boton_orden w-100 rounded-5"
+              value="Agregar">
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2>Notas/Tareas</h2>
+          <div id="lista-notas">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--#contenido-->
+
+
+  <footer class="border-top">
+    <div class="container-xl">
+      <div class="row">
+
+        <div class="col-md-6 mt-2">
+          <img class="img-fluid" src="img/unnamed.png" alt="logo CoderHouse">
+        </div>
+
+        <div class="col-md-6 d-flex align-items-center">
+          <h3 class="me-4 mt-4 text-white fs-2">Alexander De Simone</h3>
+        </div>
+
+      </div>
+    </div>
   </footer>
+
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/calculadora.js"></script>
 </body>
 
 </html>

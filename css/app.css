@@ -32,15 +32,15 @@ footer {
   text-transform: uppercase;
   padding: 1.5rem;
   border: 2px solid aqua;
+  border-radius: 25%;
 }
 .boton_orden:hover {
-  background-color: #19a6fc;
+  background-color: #19fcb0dc;
   border: 2px solid blue;
 }
 
 .modal_orden {
   border-radius: 25px;
-  border: 2px solid blue;
 }
 
 h2.modal-title {
@@ -70,6 +70,7 @@ h2.modal-title {
 
 .dark {
   background-color: rgba(0, 0, 0, 0.867);
+  color: aliceblue !important;
 }
 
 /* CALCULADORA */
@@ -77,7 +78,8 @@ h2.modal-title {
 .contenedor_calculadora {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-left: 0.2rem;
+  align-items: flex-start;
   height: 100vh;
 }
 
@@ -136,4 +138,32 @@ h2.modal-title {
 
 #valor-inferior {
   font-size: 2em;
+}
+
+/* Hoja de prueba */
+h1,
+h2 {
+  text-align: center;
+}
+
+#contenido {
+  margin-top: 40px;
+}
+.borrar-nota,
+.borrar-nota:hover {
+  float: right;
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+}
+
+.error {
+  background-color: red;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  max-width: 400px;
+  margin: 0 auto;
+  color: white;
 }
