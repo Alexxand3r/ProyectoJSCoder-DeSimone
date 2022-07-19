@@ -166,38 +166,56 @@
 
     <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden ms-2"><span><img
           width="50" src="img/traductor.svg" alt="imagen traductor"></span></button>
+
+
+    <!--AGREGAR NOTAS-->
+
+    <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+      aria-controls="offcanvasBottom">NOTAS</button>
   </div>
+  <!--FLEX BOTONES-->
 
 
-  <!--AGREGAR NOTAS-->
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header bg-light">
+      <label for="notas" id="offcanvasBottomLabel">
+        <h5 class="mb-0 fs-5 offcanvas-title bg-success p-2 rounded-pill">Notas:</h5>
+      </label>
 
-  <div id="contenido">
-    <div class="container-xl">
+      <button type="button" class="btn-close btn-success active" data-bs-dismiss="offcanvas"
+        aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small mt-1 pt-0" id="contenido">
+      <div class="container-xl">
+        <div class="row">
 
+          <div class="col-md-6">
+            <form id="formulario-notas">
 
-      <div class="row">
-        <div class="col-md-6">
-          <label for="notas">
-            <h1>Notas:</h1>
-          </label>
-          <form id="formulario-notas">
-            <label for="notas"></label>
-            <textarea id="notas" rows="5" class="w-100 rounded-4  border border-3 border-success"></textarea>
-            <input type="submit" class="btn  border border-3 border-success boton_orden w-100 rounded-5"
-              value="Agregar">
-          </form>
-        </div>
-        <div class="col-md-6">
-          <h2>Notas/Tareas</h2>
-          <div id="lista-notas">
+              <label for="notas"></label>
 
+              <textarea id="notas" rows="5" class="w-100 border border-3 border-success"></textarea>
+
+              <input type="submit" class="btn-success  border border-3 border-success  w-100 rounded-pill mb-2"
+                value="Agregar">
+            </form>
+          </div>
+
+          <div class="col-md-6">
+
+            <h2 class="mb-0 fs-4 bg-success p-1 rounded-pill">Notas/Tareas</h2>
+
+            <div class="mt-4" id="lista-notas">
+
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
+    <!--#contenido-->
+
   </div>
-  <!--#contenido-->
 
 
   <footer class="border-top">
