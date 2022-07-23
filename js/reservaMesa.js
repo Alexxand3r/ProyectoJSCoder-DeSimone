@@ -29,7 +29,7 @@ class Reservas {
 
 class UsuarioInterfaz {
   imprimirAlerta(mensaje, tipo) {
-    //crear el DIV
+    //crear el contenedor para el mensaje y agregar las clases(DIV)
     const divMensaje = document.createElement('div');
     divMensaje.classList.add('text-center', 'alert', 'd-block', 'col-12');
     //Agregar clase
@@ -49,14 +49,85 @@ class UsuarioInterfaz {
       divMensaje.remove();
     }, 3000);
   }
+
+  //se accede al arreglo del objeto mediante Destructuring desde el parámetro
+  mostarReservas({ reservas }) {
+    //metodo para evitar q se dupliquen las reservas.
+    this.limpiarHTML();
+
+    //const { reservas } = reservas;
+    //console.log(reservas);
+    reservas.forEach(reserva => {
+      //Destructuring sobre reserva
+      //se extrae del objeto actual,la reserva actual y el ID para editar o eliminar reserva
+      const { cliente, telefono, personas, fecha, hora, detalle, id } = reserva;
+
+      //estilo y creación del contenedor de cada reserva (DIV)
+      const divReserva = document.createElement('div');
+      divReserva.classList.add('reserva', 'p-3');
+      //capturar el id y asignarlo como un atributo
+      divReserva.dataset.id = id;
+
+      //configuración de los elementos de la reserva a mostrar (Scripting)
+
+      const clienteParrafo = document.createElement('h2');
+      clienteParrafo.classList.add('card-title', 'font-weight-bolder');
+      clienteParrafo.textContent = cliente;
+
+      const telefonoParrafo = document.createElement('p');
+      telefonoParrafo.innerHTML = `
+      <span class="font-weight-bolder"> Teléfono: </span> ${telefono}
+      `;
+
+      const personasParrafo = document.createElement('p');
+      personasParrafo.innerHTML = `
+      <span class="font-weight-bolder"> Cantidad Personas : </span> ${personas}
+      `;
+
+      const fechaParrafo = document.createElement('p');
+      fechaParrafo.innerHTML = `
+      <span class="font-weight-bolder"> Fecha : </span> ${fecha}
+      `;
+
+      const horaParrafo = document.createElement('p');
+      horaParrafo.innerHTML = `
+      <span class="font-weight-bolder"> Hora : </span> ${hora}
+      `;
+
+      const detalleParrafo = document.createElement('p');
+      detalleParrafo.innerHTML = `
+      <span class="font-weight-bolder"> Detalles : </span> ${detalle}
+      `;
+      //agrego el elemento al contenedor
+      divReserva.appendChild(clienteParrafo);
+      divReserva.appendChild(telefonoParrafo);
+      divReserva.appendChild(personasParrafo);
+      divReserva.appendChild(fechaParrafo);
+      divReserva.appendChild(horaParrafo);
+      divReserva.appendChild(detalleParrafo);
+
+      //agregar la reserva al HTML
+      contenedorReservas.appendChild(divReserva);
+    });
+  }
+
+  //evitar q se dupliquen
+
+  //llamar método antes de hacer la iteración
+  limpiarHTML() {
+    //mientras sea "true" la condición,se eliminan cada uno de los hijos del contenedorReservas
+    while (contenedorReservas.firstChild) {
+      contenedorReservas.removeChild(contenedorReservas.firstChild);
+    }
+  }
 }
 
-//instaciar de forma global
+//instanciar de forma global
 
 const ui = new UsuarioInterfaz();
 const administrarReservas = new Reservas();
 
-//registrar eventos
+//Registrar eventos
 
 captarEventos();
 function captarEventos() {
@@ -72,7 +143,7 @@ function captarEventos() {
 
 //crear el objeto reserva,definir los name de cada input
 
-//objeto con la información de la reserva.
+//Objeto con la información de la reserva.
 
 const reservaObj = {
   cliente: '',
@@ -104,7 +175,7 @@ function nuevaReserva(e) {
     (cliente === '' || telefono === '' || personas === '',
     fecha === '' || hora === '' || detalle === '')
   ) {
-    ui.imprimirAlerta('Todos los campos son obligatorios ', 'error');
+    ui.imprimirAlerta('Todos los campos son obligatorios ⚠ ', 'error');
     //console.log('probando campos vacíos');
     //return para q no se ejecute la siguiente linea disponible aunque este dentro de un "if"
     return;
@@ -124,9 +195,12 @@ function nuevaReserva(e) {
   formularioReserva.reset();
 
   //mostrar reserva en HTML
+  //crear método mostrarReservas
+  //ref administrarReservas,contiene el arreglo con las reservas
+  ui.mostarReservas(administrarReservas);
 }
 
-//funcion para reiniciar el objeto
+//función para reiniciar el objeto
 function reiniciarObjeto() {
   reservaObj.cliente = '';
   reservaObj.telefono = '';
