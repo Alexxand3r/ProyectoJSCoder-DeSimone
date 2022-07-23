@@ -32,6 +32,7 @@ let notas = [];
 
 //eventos
 escucharEvento();
+
 function escucharEvento() {
   formularioNotas.addEventListener('submit', agregarNota);
 }
