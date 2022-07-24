@@ -1,15 +1,27 @@
 /* variables */
 
+:root {
+  --fuentePrincipal: 'Secular One', sans-serif;
+  --azul: #0d6efd;
+  --celeste: #0dcaf0;
+  --violeta: #6610f2;
+  --rojo: #dc3545;
+  --verde: #198754;
+  --verdeClaro: #20c997;
+  --blancEsp: #e1e1e1;
+  --negroEsp: #1d1c1c;
+}
+
 /* globales */
 html {
   min-height: 100%;
 }
 body {
-  font-family: 'Secular One', sans-serif;
+  font-family: var(--fuentePrincipal);
 }
 
 .header {
-  background-color: #0026fa;
+  background-color: var(--azul);
 }
 .icono_logo {
   background-color: white;
@@ -23,13 +35,13 @@ body {
 
 footer {
   margin-top: 7rem;
-  background-color: black;
+  background-color: var(--negroEsp);
 }
 
 /* CARGAR MESA */
 
 .boton_orden {
-  background-color: rgb(0, 38, 250);
+  background-color: var(--azul);
   color: white;
   text-transform: uppercase;
   padding: 1.5rem;
@@ -38,7 +50,7 @@ footer {
 }
 .boton_orden:hover {
   background-color: #19fcb0dc;
-  border: 2px solid blue;
+  border: 2px solid var(--azul);
 }
 
 .modal_orden {
@@ -89,10 +101,10 @@ h2.modal-title {
   display: grid;
   grid-template-columns: repeat(4, 75px);
   grid-template-rows: 160px repeat(5, 75px);
-  background-color: #19a6fc;
+  background-color: var(--celeste);
   padding: 15px;
   border-radius: 32px;
-  box-shadow: 0px 0px 0px 5px #00000033;
+  box-shadow: 0px 0px 0px 5px var(--negroEsp);
 }
 
 .calculadora button {
@@ -103,11 +115,11 @@ h2.modal-title {
   border-radius: 32px;
   font-size: 1.5em;
   border: none;
-  background-color: #0026fa;
+  background-color: var(--azul);
   box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #0077ff1f;
 }
 .calculadora button:active {
-  background-color: #19a6fc;
+  background-color: var(--celeste);
 }
 .calculadora button:focus {
   outline: none;
@@ -158,12 +170,12 @@ h2 {
 .borrar-nota:hover {
   float: right;
   cursor: pointer;
-  color: red;
+  color: var(--rojo);
   font-weight: bold;
 }
 
 .error {
-  background-color: rgba(255, 17, 0, 0.851);
+  background-color: var(--rojo);
   text-align: center;
   padding: 10px;
   text-transform: uppercase;
@@ -175,26 +187,29 @@ h2 {
 }
 
 /* RESERVAR MESAS */
-
-.reserva-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  min-height: 100%;
-  padding-bottom: 5rem;
+.reservas {
+  border-top: 3px solid var(--azul);
+  margin-top: 1rem;
 }
+
+.contenedor-reservas {
+  border-radius: 5%;
+}
+
 .titulo-reserva {
+  margin-top: 2rem;
   font-weight: bold;
   font-size: 3rem;
   text-transform: uppercase;
-  color: black;
 }
-.container {
-  background-color: white;
+.detalles-reserva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lista-reservas .reserva {
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid var(--blancEsp);
   padding: 2rem;
   padding-bottom: 3rem;
 }

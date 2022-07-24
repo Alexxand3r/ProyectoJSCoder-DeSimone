@@ -30,6 +30,12 @@ class Reservas {
   eliminarReserva(id) {
     this.reservas = this.reservas.filter(reserva => reserva.id !== id);
   }
+  editarReserva(reservaEditada) {
+    //se usa  .map para reescribir el arreglo una vez editado.
+    this.reservas = this.reservas.map(reserva =>
+      reserva.id === reservaEditada.id ? reservaEditada : reserva
+    );
+  }
 }
 
 class UsuarioInterfaz {
@@ -212,7 +218,9 @@ function nuevaReserva(e) {
 
     ui.imprimirAlerta('Editado Correctamente');
     //pasar el objeto de la reserva a edición
-
+    //pasar una copia del objeto completo,ya habiendo asignado los valores.
+    administrarReservas.editarReserva({ ...reservaObj });
+    //cambiar el texto del boton
     formularioReserva.querySelector('button[type="submit"]').textContent =
       'Crear Reserva';
     //quitar modo edición para q se reinicie el formulario

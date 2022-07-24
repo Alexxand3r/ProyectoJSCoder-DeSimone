@@ -31,6 +31,8 @@
       class="btn  botonDM border border-primary">Dark</button>
   </div>
 
+
+
   <!--CARGAR MESA-->
 
   <!--Boton cargar mesa-->
@@ -114,9 +116,8 @@
 
 
     <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-      aria-controls="offcanvasScrolling"
-      class="border border-3 border-success rounded-pill  boton_orden me-2"><span><img width="50"
-          src="img/calculator.svg" alt="imagen Calculadora"></span></button>
+      aria-controls="offcanvasScrolling" class="border border-3 border-success rounded-pill  boton_orden me-2"><span
+        class="me-1"><img width="50" src="img/calculator.svg" alt="imagen Calculadora"></span>Calculadora</button>
 
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
       id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
@@ -165,14 +166,16 @@
     <!--Boton Traductor-->
 
     <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden ms-2"><span><img
-          width="50" src="img/traductor.svg" alt="imagen traductor"></span></button>
+          class="me-1" width="50" src="img/traductor.svg" alt="imagen traductor"></span>Traductor</button>
 
 
     <!--AGREGAR NOTAS-->
 
-    <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
-      aria-controls="offcanvasBottom">NOTAS</button>
+    <button class="btn border border-3 border-success boton_orden rounded-pill ms-3" type="button"
+      data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><span><img width="50"
+          src="img/notas.svg" alt="Boton notas"></span>NOTAS</button>
   </div>
+
   <!--FLEX BOTONES-->
 
 
@@ -216,7 +219,80 @@
     <!--#contenido-->
 
   </div>
+  <!--RESERVAR MESA-->
 
+  <section class="reservas container-xl">
+    <h2 class="text-center bg-info rounded-pill detalles-reserva  titulo-reserva"><span class="me-2"><img width="50"
+          src="img/reservar.svg" alt="sección reservar mesas"></span>Reservar Mesa</h2>
+    <div class="container bg-light mt-5 p-5 border border-3 border-success contenedor-reservas">
+
+      <div id="contenidoCliente" class="row">
+        <div class="col-md-6 agregar-reserva">
+          <form id="nueva-reserva">
+            <legend class="mb-4  bg-info rounded-pill detalles-reserva"><span class="ms-2"><img width="30"
+                  src="img/agregacliente2.svg" alt="sección reservar mesas"></span>Datos del Cliente</legend>
+            <div class="form-group row mb-1">
+              <label class="col-sm-4 col-lg-4 col-form-label bg-success p-2 rounded-pill detalles-reserva">Nombre:
+              </label>
+              <div class="col-sm-8 col-lg-8">
+                <input type="text" id="clienteReserva" name="cliente" class="form-control "
+                  placeholder="Nombre del cliente">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label
+                class="col-sm-4 col-lg-4 col-form-label bg-success p-2 rounded-pill detalles-reserva">Teléfono:</label>
+              <div class="col-sm-8 col-lg-8">
+                <input type="tel" id="telefonoReserva" name="telefono" class="form-control"
+                  placeholder="Número de Teléfono">
+              </div>
+            </div>
+            <div class="form-group row mt-1">
+              <label class="col-sm-4 col-lg-4 col-form-label bg-success p-2 rounded-pill detalles-reserva">Cantidad
+                Personas: </label>
+              <div class="col-sm-8 col-lg-8">
+                <input type="text" id="personasReserva" name="personas" class="form-control"
+                  placeholder="Comensales en Total">
+              </div>
+            </div>
+
+            <div class="form-group row my-1">
+              <label
+                class="col-sm-4 col-lg-4 col-form-label bg-success p-2 rounded-pill detalles-reserva">Fecha:</label>
+              <div class="col-sm-8 col-lg-8">
+                <input type="date" id="fechaReserva" name="fecha" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group row my-1">
+              <label class="col-sm-4 col-lg-4 col-form-label bg-success p-2 rounded-pill detalles-reserva">Hora:</label>
+              <div class="col-sm-8 col-lg-8">
+                <input type="time" id="horaReserva" name="hora" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label
+                class="col-sm-4 col-lg-4 col-form-label bg-success p-2 rounded-pill detalles-reserva detalles-reserva"><span>Detalles
+                  :</span></label>
+              <div class="col-sm-8 col-lg-8">
+                <textarea id="detalleReserva" name="detalle" class="form-control" rows="8"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-info w-100 d-block mt-2 rounded-pill">Crear Reserva</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2 id="administraReserva" class="mb-4 bg-info rounded-pill my-1">Reservas :</h2>
+          <ul id="reservas" class="list-group lista-reservas"></ul>
+        </div>
+      </div>
+      <!--.row-->
+    </div>
+    <!--.container-->
+  </section>
 
   <footer class="border-top">
     <div class="container-xl">
@@ -238,6 +314,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/calculadora.js"></script>
+  <script src="js/reservaMesa.js"></script>
 </body>
 
 </html>

@@ -34,7 +34,19 @@ let notas = [];
 escucharEvento();
 
 function escucharEvento() {
+  //usuario agrega una nueva nota
   formularioNotas.addEventListener('submit', agregarNota);
+
+  //documento listo
+  document.addEventListener('DOMContentLoaded', () => {
+    //null / forEach no itera sobre "null"
+    //si la nota no fue creada aun (arreglo),asigno arreglo vació
+    notas = JSON.parse(localStorage.getItem('notas')) || [];
+
+    console.log(notas);
+    //solo se ejecuta si hay algo en el arreglo
+    crearHTML();
+  });
 }
 
 //Funciones
@@ -47,12 +59,13 @@ function agregarNota(e) {
   const nota = document.querySelector('#notas').value;
   //validación
   if (nota === '') {
-    console.log('probando vació');
+    //console.log('probando vació');
     mostrarError('No ingresaste contenido! ⚠');
     return; //evita q se ejecuten mas linea de código
+    //solo funciona en un if,mientras se encuentre en una función
   }
   //console.log('probando');
-  //asignar un id con (Date.now) no hay base de datos aun..
+  //asignar un id con (Date.now)
   const notaObj = {
     id: Date.now(),
     nota,
@@ -81,10 +94,11 @@ function mostrarError(error) {
   }, 2500);
 }
 
-//Crear HTML
+//Crear en HTML listado de notas
 function crearHTML() {
   limpiarHTML();
 
+  //el código se ejecuta solo cuando haya algo en el arreglo.
   if (notas.length > 0) {
     notas.forEach(nota => {
       //Crear HTML
@@ -95,6 +109,12 @@ function crearHTML() {
       listaNotas.appendChild(li);
     });
   }
+  sincronizarStorage();
+}
+
+//Agregar las notas al LocalStorage
+function sincronizarStorage() {
+  localStorage.setItem('notas', JSON.stringify(notas));
 }
 
 //limpiar el HTML
