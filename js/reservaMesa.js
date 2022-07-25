@@ -236,7 +236,7 @@ function nuevaReserva(e) {
     //se pasa el objeto y se toma copia,no la referencia completa,para evitar q se pisen con el prox valor
     administrarReservas.agregarReserva({ ...reservaObj });
     // Mostrar mensaje .
-    ui.imprimirAlerta('Se agregó correctamente');
+    ui.imprimirAlerta('La Reserva,se creo correctamente ✔');
   }
 
   //console.log(reservaObj);

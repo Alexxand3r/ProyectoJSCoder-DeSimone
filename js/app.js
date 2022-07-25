@@ -101,10 +101,22 @@ function crearHTML() {
   //el código se ejecuta solo cuando haya algo en el arreglo.
   if (notas.length > 0) {
     notas.forEach(nota => {
+      //Boton Eliminar
+      const btnEliminar = document.createElement('a');
+      btnEliminar.classList.add('borrar-nota');
+      btnEliminar.innerText = 'X';
+      //agregar la función para eliminar
+      //la función requiere parámetros
+      btnEliminar.onclick = () => {
+        borrarNota(nota.id);
+      };
+
       //Crear HTML
       const li = document.createElement('li');
       //Añadir texto
       li.innerText = nota.nota;
+      //asignar el botón
+      li.appendChild(btnEliminar);
       //insertarlo en el html
       listaNotas.appendChild(li);
     });
@@ -123,6 +135,18 @@ function limpiarHTML() {
     listaNotas.removeChild(listaNotas.firstChild);
   }
 }
+
+//Eliminar Nota
+function borrarNota(id) {
+  //console.log('probando borrar', id);
+
+  //asi trae todas las notas excepto a la q se le dio click
+  notas = notas.filter(nota => nota.id !== id);
+  // console.log(notas);
+
+  //Se sincroniza con el local Storage
+  crearHTML();
+}
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
@@ -131,7 +155,8 @@ function limpiarHTML() {
 
 //funcionalidades iniciales/requerimientos iniciales
 
-validación de campos ventana modal
+validación de campos// ventanas modal//Formularios
+MOSTRAR MENSAJES A EVENTOS.
 
 Menu:  AGREGAR/MOSTRAR/ELIMINAR  
 
@@ -146,6 +171,10 @@ herramientas extras:
 //botón dark mode
 //calculadora
 //conversor de divisas - Dólar/Reales/pesos chilenos/bitcoin(API?)
+//Reservas
+//Temporizador
+//Traductor?
+
 //recetas?(API)
 
 simulaciones:
@@ -164,4 +193,10 @@ Tareas:
 *interfaz visual UX / Ui 
 *responsive / Mobil first
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*Local Storage
+*Session Storage
+*IndexDB
+*JSON
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 */

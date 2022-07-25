@@ -108,7 +108,7 @@ h2.modal-title {
 }
 
 .calculadora button {
-  color: aliceblue;
+  color: var(--blancEsp);
   cursor: pointer;
   margin: 5px;
   padding: 0px;
@@ -126,7 +126,7 @@ h2.modal-title {
 }
 
 .pantalla_calculadora {
-  color: aliceblue;
+  color: var(--blancEsp);
   grid-column: 1 /-1;
   font-size: 2.5rem;
   padding: 16px;
@@ -182,7 +182,7 @@ h2 {
   font-weight: bold;
   max-width: 400px;
   margin: 0 auto;
-  color: white;
+  color: var(--blancEsp);
   border-radius: 15%;
 }
 
