@@ -35,8 +35,10 @@
 
   <!--------------------------------------------------------------------------------------------->
 
-
   <!--CARGAR MESA-->
+
+  <!-- json-server --watch db.json --port 4000-->
+
 
   <!--Boton cargar mesa-->
 
@@ -52,7 +54,7 @@
     <div class="modal-dialog">
       <div class="modal-content modal_orden border border-3 border-success">
         <div class="modal-header">
-          <h2 class="modal-title bg-success p-2 rounded-pill ms-1"> Cargar Mesa <img width="40"
+          <h2 class="modal-title bg-info border border-3 p-2 rounded-pill ms-1"> Cargar Mesa <img width="40"
               src="img/waiter-icon.svg" alt="icono mozo">
           </h2>
           <button type=" button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -60,23 +62,24 @@
         <div class="modal-body bg-light">
           <form>
             <div class="mb-3">
-              <label class="form-label bg-success p-2 rounded-pill"><img class="mb-2" width="35" src="img/mesa.svg"
-                  alt="icono mesa"> Mesa N° :
+              <label class="form-label bg-success p-2 border border-3 rounded-pill"><img class="mb-2" width="35"
+                  src="img/mesa.svg" alt="icono mesa"> Mesa N° :
               </label>
               <input id="mesa" type="number" class="form-control rounded-pill p-2" min="1" max="8">
             </div>
             <div class="mb-3">
-              <label class="form-label bg-success p-2 rounded-pill"><img width="35" src="img/fork-tiempo.svg"
-                  alt="icono tiempo de inicio"> Hora :
+              <label class="form-label bg-success p-2 border border-3 rounded-pill"><img width="35"
+                  src="img/fork-tiempo.svg" alt="icono tiempo de inicio"> Hora :
               </label>
               <input id="hora" type="time" class="form-control rounded-pill p-2">
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger rounded-pill p-3" data-bs-dismiss="modal">Cerrar</button>
-          <button id="guardar-cliente" type="button"
-            class="btn border border-3 border-success btn-success rounded-pill p-3">Abrir Mesa</button>
+          <button type="button" class="btn btn-danger border border-3 rounded-pill p-3"
+            data-bs-dismiss="modal">Cerrar</button>
+          <button id="guardar-cliente" type="button" class="btn border border-3  btn-info rounded-pill p-3">Abrir
+            Mesa</button>
         </div>
       </div>
     </div>
@@ -146,19 +149,19 @@
           <button class="borrar_calculadora" alt="porcentaje" id="porcentaje">%</button>
 
           <button class="operador_calculadora" alt="dividido" id="dividido">/</button>
-          <button class="numero_calculadora" alt="7" id="7">7</button>
-          <button class="numero_calculadora" alt="8" id="8">8</button>
-          <button class="numero_calculadora" alt="9" id="9">9</button>
+          <button class="numero_calculadora" alt="7" id="siete">7</button>
+          <button class="numero_calculadora" alt="8" id="ocho">8</button>
+          <button class="numero_calculadora" alt="9" id="nueve">9</button>
           <button class="operador_calculadora" alt="por" multiplica" id="por">x</button>
-          <button class="numero_calculadora" alt="4" id="4">4</button>
-          <button class="numero_calculadora" alt="5" id="5">5</button>
-          <button class="numero_calculadora" alt="6" id="6">6</button>
+          <button class="numero_calculadora" alt="4" id="cuatro">4</button>
+          <button class="numero_calculadora" alt="5" id="cinco">5</button>
+          <button class="numero_calculadora" alt="6" id="seis">6</button>
           <button class="operador_calculadora" alt="menos" id="menos">-</button>
-          <button class="numero_calculadora" alt="1" id="1">1</button>
-          <button class="numero_calculadora" alt="2" id="2">2</button>
-          <button class="numero_calculadora" alt="3" id="3">3</button>
+          <button class="numero_calculadora" alt="1" id="uno">1</button>
+          <button class="numero_calculadora" alt="2" id="dos">2</button>
+          <button class="numero_calculadora" alt="3" id="tres">3</button>
           <button class="operador_calculadora" alt="mas" id="mas">+</button>
-          <button class="numero_calculadora " alt="0" id="0">0</button>
+          <button class="numero_calculadora " alt="0" id="cero">0</button>
           <button class="numero_calculadora" alt="punto" id="punto">.</button>
           <button class="resultado_calculadora col_2-calculadora" alt="igual" id="igual">=</button>
 
@@ -331,6 +334,7 @@
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/calculadoraConsumos.js"></script>
   <script src="js/calculadora.js"></script>
   <script src="js/reservaMesa.js"></script>
 </body>

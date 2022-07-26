@@ -19,34 +19,34 @@ const calculadora = {
   },
 
   asignarEventosaFuncion: function () {
-    document.getElementById('0').addEventListener('click', function () {
+    document.getElementById('cero').addEventListener('click', function () {
       calculadora.ingresoNumero('0');
     });
-    document.getElementById('1').addEventListener('click', function () {
+    document.getElementById('uno').addEventListener('click', function () {
       calculadora.ingresoNumero('1');
     });
-    document.getElementById('2').addEventListener('click', function () {
+    document.getElementById('dos').addEventListener('click', function () {
       calculadora.ingresoNumero('2');
     });
-    document.getElementById('3').addEventListener('click', function () {
+    document.getElementById('tres').addEventListener('click', function () {
       calculadora.ingresoNumero('3');
     });
-    document.getElementById('4').addEventListener('click', function () {
+    document.getElementById('cuatro').addEventListener('click', function () {
       calculadora.ingresoNumero('4');
     });
-    document.getElementById('5').addEventListener('click', function () {
+    document.getElementById('cinco').addEventListener('click', function () {
       calculadora.ingresoNumero('5');
     });
-    document.getElementById('6').addEventListener('click', function () {
+    document.getElementById('seis').addEventListener('click', function () {
       calculadora.ingresoNumero('6');
     });
-    document.getElementById('7').addEventListener('click', function () {
+    document.getElementById('siete').addEventListener('click', function () {
       calculadora.ingresoNumero('7');
     });
-    document.getElementById('8').addEventListener('click', function () {
+    document.getElementById('ocho').addEventListener('click', function () {
       calculadora.ingresoNumero('8');
     });
-    document.getElementById('9').addEventListener('click', function () {
+    document.getElementById('nueve').addEventListener('click', function () {
       calculadora.ingresoNumero('9');
     });
     document
