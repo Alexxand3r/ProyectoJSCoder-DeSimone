@@ -63,30 +63,6 @@ h2.modal-title {
 
 /*   botón Dark Mode   */
 
-.btn-light {
-  color: black;
-  background-color: azure;
-  border: 1px solid black;
-}
-.btn-light:hover {
-  color: white;
-  background-color: black;
-}
-.botonDM {
-  margin-left: 0.5rem;
-  margin-top: 0.4rem;
-  border-radius: 45%;
-}
-.botonDM:hover {
-  color: white;
-  background-color: black;
-}
-
-.dark {
-  background-color: rgba(0, 0, 0, 0.867);
-  color: aliceblue !important;
-}
-
 /* CALCULADORA */
 
 .contenedor_calculadora {
@@ -187,9 +163,8 @@ h2 {
 }
 
 /* RESERVAR MESAS */
-.reservas {
+.borde-arriba {
   border-top: 3px solid var(--azul);
-  margin-top: 1rem;
 }
 
 .contenedor-reservas {

@@ -23,15 +23,141 @@
     </h1>
   </header>
 
+  <!----------------------------------------------------------------------------------------->
+  <!--Botones Herramientas-->
+
+  <div class="container-fluid border-bottom border-top border-success bg-light">
+    <div class="row my-3">
+      <div class="col-md-3 mb-1">
+        <!-- Boton Calculadora -->
+
+        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+          class="w-100 border border-3 border-success rounded-pill  boton_orden"><span class="me-2"><img width="50"
+              src="img/calculator.svg" alt="imagen Calculadora"></span>Calculadora</button>
+
+        <!----------------------------------------------------------------------------------------->
+      </div>
+      <div class="col-md-3 mb-2">
+        <!--Boton Cambio Divisas-->
+        <button type="button" class="btn border border-3 border-success boton_orden rounded-pill w-100"><img
+            class="me-2" width="50" src="img/divisa.svg" alt="imagen cambio de divisas">Cambio divisas</button>
+
+
+        <!--------------------------------------------------------------------------------------------->
+      </div>
+      <div class="col-md-3 mb-2">
+        <!--Boton Traductor-->
+
+
+        <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden w-100"><span><img
+              class="me-2" width="50" src="img/traductor.svg" alt="imagen traductor"></span>Traductor</button>
+
+        <!--------------------------------------------------------------------------------------------->
+      </div>
+      <div class="col-md-3 mb-2">
+        <!--Boton agregar notas-->
+
+        <button class="w-100 btn border border-3 border-success boton_orden rounded-pill" type="button"
+          data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><span><img
+              width="50" src="img/notas.svg" alt="Boton notas"></span>NOTAS</button>
+
+        <!--------------------------------------------------------------------------------------------->
+      </div>
+    </div>
+  </div>
+  <!--------------------------------------------------------------------------------------------->
 
   <!--------------------------------------------------------------------------------------------->
 
-  <!--Boton Dark Mode-->
+  <!--OFF CANVAS CALCULADORA-->
 
-  <div>
-    <button onclick="cambiarModo( )" id="darkMode" type="button"
-      class="btn  botonDM border border-primary">Dark</button>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header bg-light">
+      <h5 class="offcanvas-title fs-4 dark bg-success p-2 rounded-pill ms-3" id="offcanvasScrollingLabel"> No
+        Pierdas
+        la
+        Cuenta!! 😁
+      </h5>
+      <button type="button" class="btn-close dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body contenedor_calculadora bg-light">
+      <div class="calculadora">
+        <div class="pantalla_calculadora" id="calculadoraFondo">
+          <span id="display">0</span>
+        </div>
+
+        <button class="col_2-calculadora" id="borrarDisplay">C</button>
+        <button class="borrar_calculadora" alt="porcentaje" id="porcentaje">%</button>
+
+        <button class="operador_calculadora" alt="dividido" id="dividido">/</button>
+        <button class="numero_calculadora" alt="7" id="siete">7</button>
+        <button class="numero_calculadora" alt="8" id="ocho">8</button>
+        <button class="numero_calculadora" alt="9" id="nueve">9</button>
+        <button class="operador_calculadora" alt="por" multiplica" id="por">x</button>
+        <button class="numero_calculadora" alt="4" id="cuatro">4</button>
+        <button class="numero_calculadora" alt="5" id="cinco">5</button>
+        <button class="numero_calculadora" alt="6" id="seis">6</button>
+        <button class="operador_calculadora" alt="menos" id="menos">-</button>
+        <button class="numero_calculadora" alt="1" id="uno">1</button>
+        <button class="numero_calculadora" alt="2" id="dos">2</button>
+        <button class="numero_calculadora" alt="3" id="tres">3</button>
+        <button class="operador_calculadora" alt="mas" id="mas">+</button>
+        <button class="numero_calculadora " alt="0" id="cero">0</button>
+        <button class="numero_calculadora" alt="punto" id="punto">.</button>
+        <button class="resultado_calculadora col_2-calculadora" alt="igual" id="igual">=</button>
+
+      </div>
+    </div>
   </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <!--OFFCANVAS AGREGAR NOTAS-->
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header bg-light my-0">
+      <label for="notas" id="offcanvasBottomLabel">
+        <h5 class="mb-0 fs-5 offcanvas-title bg-success p-2 rounded-pill">Notas:</h5>
+      </label>
+
+      <button type="button" class="btn-close btn-success active" data-bs-dismiss="offcanvas"
+        aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small mt-1 pt-0" id="contenido">
+      <div class="container-xl">
+        <div class="row">
+
+          <div class="col-md-6">
+            <form id="formulario-notas">
+
+              <label for="notas"></label>
+
+              <textarea id="notas" rows="5" class="w-100 border border-3 border-success"></textarea>
+
+              <input type="submit" class="btn-success  border border-3 border-success  w-100 rounded-pill mb-2 p-1"
+                value="Agregar">
+            </form>
+          </div>
+
+          <div class="col-md-6">
+
+            <h2 class="mb-0 fs-4 bg-info p-1 rounded-pill">Notas/Tareas</h2>
+
+            <div class="mt-4" id="lista-notas"></div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    <!--#contenido-->
+  </div>
+
+  <!--CAMBIO DIVISAS-->
+  <!--TRADUCTOR-->
 
   <!--------------------------------------------------------------------------------------------->
 
@@ -41,13 +167,13 @@
 
 
   <!--Boton cargar mesa-->
-
-  <div class="d-flex mt-4 justify-content-center ">
-    <button data-bs-toggle="modal" data-bs-target="#formulario" type="button"
-      class="btn border border-3 border-success boton_orden rounded-pill"><span class="me-1"><img width="55"
-          src="img/menu.svg" alt="imagen menu"></span>Cargar Mesa </button>
+  <div class="borde-arriba">
+    <div class="d-flex mt-4 justify-content-center">
+      <button data-bs-toggle="modal" data-bs-target="#formulario" type="button"
+        class="btn border border-3 border-success boton_orden rounded-pill"><span class="me-1"><img width="55"
+            src="img/menu.svg" alt="imagen menu"></span>Cargar Mesa </button>
+    </div>
   </div>
-
   <!-- Modal Cargar Mesa -->
 
   <div class="modal fade" id="formulario">
@@ -104,139 +230,11 @@
   </section>
 
 
-
-  <!--------------------------------------------------------------------------------------------->
-
-  <!--CAMBIO DIVISAS-->
-
-  <!--Boton Cambio Divisas-->
-
-  <div class="d-flex mt-4 justify-content-center">
-    <button type="button" class="btn border border-3 border-success boton_orden rounded-pill"><img class="me-2 py-1"
-        width="45" src="img/divisa.svg" alt="imagen cambio de divisas">Cambio divisas</button>
-  </div>
-
-  <!--------------------------------------------------------------------------------------------->
-  <!--CALCULADORA-->
-
-  <!-- Boton Calculadora -->
-
-
-  <div class="d-flex mt-4 justify-content-center">
-
-
-    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-      aria-controls="offcanvasScrolling" class="border border-3 border-success rounded-pill  boton_orden me-2"><span
-        class="me-1"><img width="50" src="img/calculator.svg" alt="imagen Calculadora"></span>Calculadora</button>
-
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-      id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-      <div class="offcanvas-header bg-light">
-        <h5 class="offcanvas-title fs-4 dark bg-success p-2 rounded-pill ms-3" id="offcanvasScrollingLabel"> No
-          Pierdas
-          la
-          Cuenta!! 😁
-        </h5>
-        <button type="button" class="btn-close dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body contenedor_calculadora bg-light">
-        <div class="calculadora">
-          <div class="pantalla_calculadora" id="calculadoraFondo">
-            <span id="display">0</span>
-          </div>
-
-          <button class="col_2-calculadora" id="borrarDisplay">C</button>
-          <button class="borrar_calculadora" alt="porcentaje" id="porcentaje">%</button>
-
-          <button class="operador_calculadora" alt="dividido" id="dividido">/</button>
-          <button class="numero_calculadora" alt="7" id="siete">7</button>
-          <button class="numero_calculadora" alt="8" id="ocho">8</button>
-          <button class="numero_calculadora" alt="9" id="nueve">9</button>
-          <button class="operador_calculadora" alt="por" multiplica" id="por">x</button>
-          <button class="numero_calculadora" alt="4" id="cuatro">4</button>
-          <button class="numero_calculadora" alt="5" id="cinco">5</button>
-          <button class="numero_calculadora" alt="6" id="seis">6</button>
-          <button class="operador_calculadora" alt="menos" id="menos">-</button>
-          <button class="numero_calculadora" alt="1" id="uno">1</button>
-          <button class="numero_calculadora" alt="2" id="dos">2</button>
-          <button class="numero_calculadora" alt="3" id="tres">3</button>
-          <button class="operador_calculadora" alt="mas" id="mas">+</button>
-          <button class="numero_calculadora " alt="0" id="cero">0</button>
-          <button class="numero_calculadora" alt="punto" id="punto">.</button>
-          <button class="resultado_calculadora col_2-calculadora" alt="igual" id="igual">=</button>
-
-        </div>
-      </div>
-
-    </div>
-
-    <!------------------------------------------------------------------------------------------->
-
-    <!--TRADUCTOR-->
-
-    <!--Boton Traductor-->
-
-    <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden ms-2"><span><img
-          class="me-1" width="50" src="img/traductor.svg" alt="imagen traductor"></span>Traductor</button>
-
-    <!------------------------------------------------------------------------------------------->
-
-    <!--AGREGAR NOTAS-->
-
-    <button class="btn border border-3 border-success boton_orden rounded-pill ms-3" type="button"
-      data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><span><img width="50"
-          src="img/notas.svg" alt="Boton notas"></span>NOTAS</button>
-  </div>
-
-  <!--FLEX BOTONES-->
-
-
-  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-    <div class="offcanvas-header bg-light">
-      <label for="notas" id="offcanvasBottomLabel">
-        <h5 class="mb-0 fs-5 offcanvas-title bg-success p-2 rounded-pill">Notas:</h5>
-      </label>
-
-      <button type="button" class="btn-close btn-success active" data-bs-dismiss="offcanvas"
-        aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body small mt-1 pt-0" id="contenido">
-      <div class="container-xl">
-        <div class="row">
-
-          <div class="col-md-6">
-            <form id="formulario-notas">
-
-              <label for="notas"></label>
-
-              <textarea id="notas" rows="5" class="w-100 border border-3 border-success"></textarea>
-
-              <input type="submit" class="btn-success  border border-3 border-success  w-100 rounded-pill mb-2"
-                value="Agregar">
-            </form>
-          </div>
-
-          <div class="col-md-6">
-
-            <h2 class="mb-0 fs-4 bg-success p-1 rounded-pill">Notas/Tareas</h2>
-
-            <div class="mt-4" id="lista-notas">
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!--#contenido-->
-  </div>
-
-
   <!------------------------------------------------------------------------------------------->
 
   <!--RESERVAR MESA-->
 
-  <section class="reservas container-xl">
+  <section class="borde-arriba container-xl mt-4">
     <h2 class="text-center bg-info rounded-pill detalles-reserva  titulo-reserva"><span class="me-2"><img width="50"
           src="img/reservar.svg" alt="sección reservar mesas"></span>Reservar Mesa</h2>
     <div class="container bg-light mt-5 p-5 border border-3 border-success contenedor-reservas">
