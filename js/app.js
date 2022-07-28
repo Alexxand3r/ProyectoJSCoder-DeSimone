@@ -172,14 +172,11 @@ Propina:  CALCULAR  5% 10% 25%
 
 herramientas extras:
 
-//botón dark mode
 //calculadora
 //conversor de divisas - Dólar/Reales/pesos chilenos/bitcoin(API?)
 //Reservas
-//Temporizador
-//Traductor?
 
-//recetas?(API)
+//Traductor?
 
 simulaciones:
 

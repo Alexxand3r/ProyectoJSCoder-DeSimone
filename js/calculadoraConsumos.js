@@ -98,6 +98,7 @@ function mostrarMenu(menu) {
   //acceder a cada uno de los resultados q se obtienen con fetch
   menu.forEach(plato => {
     //console.log(plato);
+    //SCRIPTING
 
     const row = document.createElement('DIV');
     row.classList.add('row', 'py-3', 'border-top');
@@ -117,16 +118,28 @@ function mostrarMenu(menu) {
 
     const inputCantidad = document.createElement('INPUT');
     inputCantidad.type = 'number';
+    //inicia en 0
     inputCantidad.min = 0;
     inputCantidad.value = 0;
     //asignar id como un atributo
     inputCantidad.id = `producto-${plato.id}`;
+    //clase para inputs de bootstrap
     inputCantidad.classList.add('form-control');
     //console.log(inputCantidad);
 
     //Función para detectar la cantidad y el platillo q se esta agregando
-    //Asociar un evento que mantenga como referencia//onchange,no se puede usar eventListener
-    inputCantidad.onchange;
+    //Asociar un evento que mantenga como referencia el objeto
+    //onchange,no se puede usar eventListener en un elemento q fue creado después
+    inputCantidad.onchange = function () {
+      //se usa una función lineal para que no se llame agregarPlato antes de que suceda el evento
+
+      //devuelve string/convertir a entero
+      const cantidad = parseInt(inputCantidad.value);
+      console.log(cantidad);
+
+      //spread con el objeto de la API + la cantidad
+      agregarPlato({ ...plato, cantidad });
+    };
 
     const agregarInput = document.createElement('DIV');
     agregarInput.classList.add('col-md-2');
@@ -139,4 +152,41 @@ function mostrarMenu(menu) {
 
     contenido.appendChild(row);
   });
+}
+
+function agregarPlato(producto) {
+  //console.log('probando agregarPlato', producto);
+  //Extraer el pedido actual/mantener  la referencia del arreglo
+  let { pedido } = cliente;
+
+  //Revisar q la cantidad sea mayor a 0
+  if (producto.cantidad > 0) {
+    //revisar si ya existe un elemento en el arreglo y solo actualizar cantidad
+    //console.log(pedido.some(articulo => articulo.id === producto.id));
+    if (pedido.some(articulo => articulo.id === producto.id)) {
+      //El articulo ya existe /Actualizar cantidad
+      //"map" iterar y devuelve nuevo arreglo sin modificar el original
+      const pedidoActualizado = pedido.map(articulo => {
+        if (articulo.id === producto.id) {
+          articulo.cantidad = producto.cantidad;
+        }
+        //se retorna el articulo para q lo asigne al arreglo y fuera de la condición para no perder la referencia en la actualización
+        return articulo;
+      });
+      //Se asigna el nuevo arreglo a cliente.pedido
+      cliente.pedido = [...pedidoActualizado];
+    } else {
+      //Agrega copia del pedido q ya existe + el producto
+      //El articulo no existe se agrega al arreglo
+      cliente.pedido = [...pedido, producto];
+    }
+    //console.log('es mayor a 0');
+  } else {
+    //console.log('no es mayor a 0');
+    //Eliminar elementos cuando es 0
+    const resultado = pedido.filter(articulo => articulo.id !== producto.id);
+    //retorna los q sean diferentes al producto q se elimina /reescribe el arreglo
+    cliente.pedido = [...resultado];
+  }
+  // console.log(cliente.pedido);
 }
