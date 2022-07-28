@@ -89,7 +89,7 @@
     <h2 class="text-center my-4">Resumen De Consumo </h2>
 
     <div class="contenido row">
-      <p class="text-center">Añade los elementos del pedido</p>
+      <p class="text-center">Pedido</p>
     </div>
   </section>
 
@@ -183,42 +183,48 @@
   <div class="container-fluid border-bottom border-top border-success bg-light mt-3">
     <h3 class="text-center mt-2">Herramientas</h3>
     <div class="row my-3">
-      <div class="col-md-3 mb-1">
-        <!-- Boton Calculadora -->
 
+
+      <!-- Boton Calculadora -->
+
+      <div class="col-md-3 mb-1">
         <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
           aria-controls="offcanvasScrolling"
           class="w-100 border border-3 border-success rounded-pill  boton_orden"><span class="me-2"><img width="50"
               src="img/calculator.svg" alt="imagen Calculadora"></span>Calculadora</button>
-
-        <!----------------------------------------------------------------------------------------->
       </div>
+
+      <!----------------------------------------------------------------------------------------->
+
+      <!--CAMBIO DIVISAS-->
+      <!--Boton Cambio Divisas-->
+
       <div class="col-md-3 mb-2">
-        <!--Boton Cambio Divisas-->
-        <button type="button" class="btn border border-3 border-success boton_orden rounded-pill w-100"><img
-            class="me-2" width="50" src="img/divisa.svg" alt="imagen cambio de divisas">Cambio divisas</button>
-
-
-        <!--------------------------------------------------------------------------------------------->
+        <a href="cotizadorDivisas.html"> <button type="button"
+            class="btn border border-3 border-success boton_orden rounded-pill w-100"><img class="me-2" width="50"
+              src="img/divisa.svg" alt="imagen cambio de divisas">Cambio divisas</button></a>
       </div>
+
+      <!--------------------------------------------------------------------------------------------->
+
+      <!--Boton Traductor-->
+
       <div class="col-md-3 mb-2">
-        <!--Boton Traductor-->
-
-
         <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden w-100"><span><img
               class="me-2" width="50" src="img/traductor.svg" alt="imagen traductor"></span>Traductor</button>
-
-        <!--------------------------------------------------------------------------------------------->
       </div>
-      <div class="col-md-3 mb-2">
-        <!--Boton agregar notas-->
 
+      <!--------------------------------------------------------------------------------------------->
+
+      <!--Boton agregar notas-->
+
+      <div class="col-md-3 mb-2">
         <button class="w-100 btn border border-3 border-success boton_orden rounded-pill" type="button"
           data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><span><img
               width="50" src="img/notas.svg" alt="Boton notas"></span>NOTAS</button>
-
-        <!--------------------------------------------------------------------------------------------->
       </div>
+
+      <!--------------------------------------------------------------------------------------------->
     </div>
   </div>
   <!--------------------------------------------------------------------------------------------->
@@ -312,8 +318,8 @@
     <!--#contenido-->
   </div>
 
-  <!--CAMBIO DIVISAS-->
   <!--TRADUCTOR-->
+
 
 
 
