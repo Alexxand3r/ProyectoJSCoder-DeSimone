@@ -189,4 +189,134 @@ function agregarPlato(producto) {
     cliente.pedido = [...resultado];
   }
   // console.log(cliente.pedido);
+
+  //Mostrar resumen "Pedido"
+  //Evitar q se multiple la información q se muestra
+  //Limpiar el Contenido previo
+  limpiarContenidoPrevio();
+  actualizarResumen();
+}
+
+function actualizarResumen() {
+  // console.log('probando Actualizar');
+  //el  #resumen se coloca primero para seleccionar el ".contenido" del resumen
+  const contenido = document.querySelector('#resumen .contenido');
+
+  const resumen = document.createElement('DIV');
+  resumen.classList.add(
+    'col-md-6',
+    'card',
+    'py-5',
+    'px-3',
+    'shadow',
+    'border',
+    'border-3',
+    'border-success',
+    'contenedor-reservas'
+  );
+
+  //Imprimir Información de la mesa
+
+  //numero de mesa
+  const mesa = document.createElement('P');
+  mesa.textContent = 'Mesa: ';
+  mesa.classList.add('fw-bold');
+
+  const mesaSpan = document.createElement('SPAN');
+  mesaSpan.textContent = cliente.mesa;
+  mesaSpan.classList.add('fw-normal');
+
+  const hora = document.createElement('P');
+  hora.textContent = 'Hora: ';
+  hora.classList.add('fw-bold');
+
+  const horaSpan = document.createElement('SPAN');
+  horaSpan.textContent = cliente.hora;
+  horaSpan.classList.add('fw-normal');
+
+  //agrega a los elementos padre
+  mesa.appendChild(mesaSpan);
+  hora.appendChild(horaSpan);
+
+  //Titulo de la seccion
+  const heading = document.createElement('H3');
+  heading.textContent = 'Platos Consumidos';
+  heading.classList.add('my-4', 'text-center', 'bg-success', 'rounded-pill');
+
+  //Iterar sobre el arreglo de pedidos
+  const grupo = document.createElement('UL');
+  grupo.classList.add('list-group');
+
+  const { pedido } = cliente;
+  pedido.forEach(articulo => {
+    //console.log('probando articulo', articulo);
+    const { nombre, cantidad, precio, id } = articulo;
+
+    const lista = document.createElement('LI');
+    lista.classList.add('list-group-item');
+
+    //nombre del elemento
+    const nombreElemento = document.createElement('H4');
+    nombreElemento.classList.add('my-4');
+    nombreElemento.textContent = nombre;
+
+    //cantidad del producto
+    const cantidadElemento = document.createElement('P');
+    cantidadElemento.classList.add('fw-bold');
+    cantidadElemento.textContent = 'Cantidad: ';
+
+    const cantidadValor = document.createElement('SPAN');
+    cantidadValor.classList.add('fw-normal');
+    cantidadValor.textContent = cantidad;
+
+    //Precio del producto
+    const precioElemento = document.createElement('P');
+    precioElemento.classList.add('fw-bold');
+    precioElemento.textContent = 'Precio: ';
+
+    const precioValor = document.createElement('SPAN');
+    precioValor.classList.add('fw-normal');
+    precioValor.textContent = `$${precio}`;
+
+    //Subtotal del articulo
+    const subtotalElemento = document.createElement('P');
+    subtotalElemento.classList.add('fw-bold');
+    subtotalElemento.textContent = 'Subtotal: ';
+
+    const subtotalValor = document.createElement('SPAN');
+    subtotalValor.classList.add('fw-normal');
+    subtotalValor.textContent = `subtotal Aqui`;
+
+    //Agregar Valores a sus contenedores
+    cantidadElemento.appendChild(cantidadValor);
+    precioElemento.appendChild(precioValor);
+    subtotalElemento.appendChild(subtotalValor);
+
+    //Agregar Elementos al LI
+
+    lista.appendChild(nombreElemento);
+    lista.appendChild(cantidadElemento);
+    lista.appendChild(precioElemento);
+    lista.appendChild(subtotalElemento);
+
+    //Agregar lista al grupo principal
+
+    grupo.appendChild(lista);
+  });
+
+  resumen.appendChild(mesa);
+  resumen.appendChild(hora);
+  resumen.appendChild(heading);
+  resumen.appendChild(grupo);
+
+  //agregar al contenido
+  contenido.appendChild(resumen);
+}
+
+function limpiarContenidoPrevio() {
+  //Limpia el HTML y deja la ultima copia,evitando q se repita la información q se imprime de la mesa
+  const contenido = document.querySelector('#resumen .contenido');
+  while (contenido.firstChild) {
+    contenido.removeChild(contenido.firstChild);
+  }
 }

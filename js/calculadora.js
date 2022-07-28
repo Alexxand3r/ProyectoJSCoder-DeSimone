@@ -1,4 +1,5 @@
 'use strict';
+
 /*
 ================================= Alexander De Simone =====
 ================= CALCULADORA😎=========================
@@ -174,7 +175,7 @@ const calculadora = {
         this.resultado = eval(primerValor / segundoValor);
         break;
       case '%':
-        this.resultado = eval((primerValor / segundoValor) * 100);
+        this.resultado = eval((primerValor * segundoValor) / 100);
     }
   },
 
