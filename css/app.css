@@ -172,12 +172,15 @@ h2 {
 }
 
 .titulo-reserva {
-  margin-top: 2rem;
+  padding: 5px;
+  color: white;
   font-weight: bold;
   font-size: 3rem;
   text-transform: uppercase;
 }
 .detalles-reserva {
+  margin-top: 0.3rem;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
