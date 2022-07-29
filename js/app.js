@@ -166,7 +166,7 @@ Menu:  AGREGAR/MOSTRAR/ELIMINAR
 
 Resumen de consumo  MOSTRAR DATOS MODAL(Mesa/hora) / CONSUMO / ELIMINAR
 
-Propina:  CALCULAR  5% 10% 25%
+Propina:  CALCULAR  5% 10% 15%
 
 //mostrar SubTotal /  Propina  / Total a Pagar
 

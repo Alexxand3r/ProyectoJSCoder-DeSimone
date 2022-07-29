@@ -209,3 +209,12 @@ h2 {
 svg {
   width: 21px;
 }
+
+/* HERRAMIENTAS */
+.herramientasTitulo {
+  color: white;
+}
+
+.letraNegra {
+  color: var(--negroEsp);
+}
