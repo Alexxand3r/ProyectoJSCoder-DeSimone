@@ -194,7 +194,14 @@ function agregarPlato(producto) {
   //Evitar q se multiple la información q se muestra
   //Limpiar el Contenido previo
   limpiarContenidoPrevio();
-  actualizarResumen();
+
+  if (cliente.pedido.length) {
+    //mostrar resumen
+    actualizarResumen();
+  } else {
+    //limpia y muestra el msj de nuevo
+    msjPedidoVacio();
+  }
 }
 
 function actualizarResumen() {
@@ -285,7 +292,19 @@ function actualizarResumen() {
 
     const subtotalValor = document.createElement('SPAN');
     subtotalValor.classList.add('fw-normal');
-    subtotalValor.textContent = `subtotal Aqui`;
+    //subtotalValor.textContent =precio * cantidad;
+    subtotalValor.textContent = calcularSubtotal(precio, cantidad);
+
+    //Boton para Eliminar
+    const btnEliminar = document.createElement('BUTTON');
+    btnEliminar.classList.add('btn', 'btn-danger', 'rounded-pill');
+    btnEliminar.textContent = 'Eliminar';
+
+    //función para eliminar del pedido
+    //se ubica en una función lineal/anónima para q no ejecute el código inmediatamente
+    btnEliminar.onclick = function () {
+      eliminarProducto(id);
+    };
 
     //Agregar Valores a sus contenedores
     cantidadElemento.appendChild(cantidadValor);
@@ -298,6 +317,7 @@ function actualizarResumen() {
     lista.appendChild(cantidadElemento);
     lista.appendChild(precioElemento);
     lista.appendChild(subtotalElemento);
+    lista.appendChild(btnEliminar);
 
     //Agregar lista al grupo principal
 
@@ -311,6 +331,10 @@ function actualizarResumen() {
 
   //agregar al contenido
   contenido.appendChild(resumen);
+
+  //Mostrar Formulario de Propinas
+  //Crear función formulario propinas
+  formularioPropinas();
 }
 
 function limpiarContenidoPrevio() {
@@ -319,4 +343,57 @@ function limpiarContenidoPrevio() {
   while (contenido.firstChild) {
     contenido.removeChild(contenido.firstChild);
   }
+}
+
+//Calcular Subtotal
+function calcularSubtotal(precio, cantidad) {
+  return `$ ${precio * cantidad}`;
+}
+
+//Eliminar Producto
+function eliminarProducto(id) {
+  // console.log('probando eliminar...', id);
+  //extrae la seccion de pedido y aplica el filter
+  const { pedido } = cliente;
+  const resultado = pedido.filter(articulo => articulo.id !== id);
+  cliente.pedido = [...resultado];
+
+  //console.log(cliente.pedido);
+  limpiarContenidoPrevio();
+  if (cliente.pedido.length) {
+    actualizarResumen();
+  } else {
+    msjPedidoVacio();
+  }
+
+  //regresar a 0 el input si se elimino el producto
+  const productoEliminado = `#producto-${id}`;
+  const inputEliminado = document.querySelector(productoEliminado);
+  //genera la instancia del input y le asigna valor 0
+  inputEliminado.value = 0;
+  //console.log(productoEliminado);
+}
+
+//reimprimir el mensaje si se eliminan todos los platos
+function msjPedidoVacio() {
+  const contenido = document.querySelector('#resumen .contenido');
+
+  const texto = document.createElement('P');
+  texto.classList.add('text-center');
+  texto.textContent = 'Añade los Productos del Pedido';
+
+  contenido.appendChild(texto);
+}
+
+//formulario propinas
+function formularioPropinas() {
+  // console.log('probando formulario propinas');
+  const contenido = document.querySelector('#resumen .contenido');
+
+  const formulario = document.createElement('DIV');
+  formulario.classList.add('col-md-6', 'formulario');
+
+  const heading = document.createElement('H3');
+  heading.classList.add('my-4');
+  heading.textContent = 'Propina';
 }
