@@ -120,20 +120,16 @@ function mostrarError(error) {
 function confirmarBorrarNota() {
   Swal.fire({
     title: 'Estas Seguro/a?',
-    text: 'No podras Recuperar la Nota',
+    text: 'No podrás Recuperar la Nota',
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Si,Borrala!',
-    cancelButtonText: 'cancelar',
+    confirmButtonText: 'Borrar',
+    cancelButtonText: 'Cancelar',
   }).then(result => {
     if (result.isConfirmed) {
-      Swal.fire(
-        'Nota Borrada!',
-        'La Nota fue Borrada Correctamente.',
-        'success'
-      );
+      Swal.fire('Borrada!', 'La Nota fue Borrada Correctamente.', 'success');
     }
   });
 }

@@ -219,10 +219,19 @@ svg {
   color: var(--negroEsp);
 }
 .swal2-styled.swal2-confirm {
-  border: 2px solid var(--verdeClaro);
-  border-radius: 25%;
+  border: 2px solid var(--blancEsp) !important;
+  border-radius: 25% !important;
   background: initial;
-  background-color: var(--azul);
+  background-color: var(--azul) !important;
+  color: #fff;
+  font-size: 1em;
+}
+
+.swal2-styled.swal2-cancel {
+  border: 2px solid var(--blancEsp) !important;
+  border-radius: 25% !important;
+  background: initial;
+  background-color: #6e7881;
   color: #fff;
   font-size: 1em;
 }
