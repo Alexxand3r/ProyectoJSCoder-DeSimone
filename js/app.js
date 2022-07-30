@@ -60,9 +60,11 @@ function agregarNota(e) {
   //validación
   if (nota === '') {
     //console.log('probando vació');
-    mostrarError('No ingresaste contenido! ⚠');
+    mostrarError();
     return; //evita q se ejecuten mas linea de código
     //solo funciona en un if,mientras se encuentre en una función
+  } else {
+    mostrarConfirmacion();
   }
   //console.log('probando');
   //asignar un id con (Date.now)
@@ -80,9 +82,29 @@ function agregarNota(e) {
   formularioNotas.reset();
 }
 
-//mostrar mensaje de error
+//Mostrar mensaje de confirmación
+
+function mostrarConfirmacion() {
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'La Nota se Agrego Correctamente',
+    showConfirmButton: false,
+    timer: 2000,
+  });
+}
+
+//mostrar mensaje de error NOTA VACÍA
 function mostrarError(error) {
-  const mensajeError = document.createElement('p');
+  Swal.fire({
+    icon: 'error',
+    title: 'La Nota esta Vacía!',
+    text: 'Inténtalo Nuevamente ⚠',
+    confirmButtonColor: '#3085d6',
+    //showConfirmButton: false,
+    //timer: 2500,
+  });
+  /*const mensajeError = document.createElement('p');
   mensajeError.textContent = error;
   mensajeError.classList.add('error');
   //insertar en el contenido
@@ -91,7 +113,29 @@ function mostrarError(error) {
   //elimina el mensaje después de 2.5seg
   setTimeout(() => {
     mensajeError.remove();
-  }, 2500);
+  }, 2500);*/
+}
+
+//Mostrar confirmación al borrar
+function confirmarBorrarNota() {
+  Swal.fire({
+    title: 'Estas Seguro/a?',
+    text: 'No podras Recuperar la Nota',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si,Borrala!',
+    cancelButtonText: 'cancelar',
+  }).then(result => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Nota Borrada!',
+        'La Nota fue Borrada Correctamente.',
+        'success'
+      );
+    }
+  });
 }
 
 //Crear en HTML listado de notas
@@ -109,6 +153,7 @@ function crearHTML() {
       //la función requiere parámetros
       btnEliminar.onclick = () => {
         borrarNota(nota.id);
+        confirmarBorrarNota();
       };
 
       //Crear HTML

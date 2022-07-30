@@ -218,3 +218,11 @@ svg {
 .letraNegra {
   color: var(--negroEsp);
 }
+.swal2-styled.swal2-confirm {
+  border: 2px solid var(--verdeClaro);
+  border-radius: 25%;
+  background: initial;
+  background-color: var(--azul);
+  color: #fff;
+  font-size: 1em;
+}
