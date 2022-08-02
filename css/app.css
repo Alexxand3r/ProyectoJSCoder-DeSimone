@@ -307,7 +307,7 @@ Menu
   display: flex;
   justify-content: center;
 }
-.filter-btn {
+.btnFiltros {
   background: transparent;
   border-color: var(--verdeClaro);
   font-weight: bold;
@@ -321,7 +321,7 @@ Menu
   cursor: pointer;
   transition: var(--transition);
 }
-.filter-btn:hover {
+.btnFiltros:hover {
   background: var(--verdeClaro);
   color: var(--blancEsp);
 }
@@ -337,6 +337,7 @@ Menu
   display: grid;
   gap: 1rem 2rem;
   max-width: 25rem;
+  justify-items: stretch;
 }
 .imagenProducto {
   padding: 0.5rem;

@@ -8,8 +8,8 @@
     },
     {
       "id": 2,
-      "nombre": "Pizza  Especial",
-      "precio": 1550,
+      "nombre": "Hamburguesa",
+      "precio": 890,
       "categoria": 1
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "id": 9,
-      "nombre": "Porción Selva Negra",
+      "nombre": "Porción Torta",
       "precio": 450,
       "categoria": 3
     },

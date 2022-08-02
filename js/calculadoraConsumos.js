@@ -419,25 +419,25 @@ function formularioPropinas() {
 
   //Botones Radio
 
-  //botón 5%
+  //botón Sin propina
 
-  const radio5 = document.createElement('INPUT');
-  radio5.type = 'radio';
+  const radio0 = document.createElement('INPUT');
+  radio0.type = 'radio';
   //se coloca un name para q solo se pueda seleccionar 1 de los radios.
-  radio5.name = 'propina';
-  radio5.value = '5';
-  radio5.classList.add('form-check-input', 'ms-4', 'me-2', 'my-1');
-  radio5.onclick = calcularPropina;
+  radio0.name = 'propina';
+  radio0.value = '0';
+  radio0.classList.add('form-check-input', 'ms-4', 'me-2', 'my-1');
+  radio0.onclick = calcularPropina;
 
-  const radio5Label = document.createElement('LABEL');
-  radio5Label.textContent = '5%';
-  radio5Label.classList.add('form-check-label');
+  const radio0Label = document.createElement('LABEL');
+  radio0Label.textContent = 'Sin propina';
+  radio0Label.classList.add('form-check-label');
 
-  const radio5Div = document.createElement('DIV');
-  radio5Div.classList.add('form-check');
+  const radio0Div = document.createElement('DIV');
+  radio0Div.classList.add('form-check');
 
-  radio5Div.appendChild(radio5);
-  radio5Div.appendChild(radio5Label);
+  radio0Div.appendChild(radio0);
+  radio0Div.appendChild(radio0Label);
 
   //botón 10%
 
@@ -479,7 +479,7 @@ function formularioPropinas() {
 
   //Agrega al DIV principal
   divFormulario.appendChild(heading);
-  divFormulario.appendChild(radio5Div);
+  divFormulario.appendChild(radio0Div);
   divFormulario.appendChild(radio10Div);
   divFormulario.appendChild(radio15Div);
 
