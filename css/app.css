@@ -289,7 +289,7 @@ Menu
 */
 
 .menu {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 .tituloProductos {
   display: flex;
@@ -406,4 +406,117 @@ Menu
   .imagenProducto {
     height: 150px;
   }
+}
+
+@media screen and (max-width: 468px) {
+  .btn-container {
+    margin-bottom: 4rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .btnFiltros {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/*CONVERSOR DIVISAS */
+
+.divisasContenedor {
+  border-radius: 5%;
+  border: 2px solid var(--verdeClaro);
+  padding: 3rem;
+}
+.inputDivisa {
+  color: var(--azul);
+  border: 1.5px solid var(--azul) !important;
+  font-weight: bold;
+  border-radius: 10px;
+}
+select,
+#monedaUno {
+  color: var(--negroEsp);
+  font-weight: bold;
+  border: 1.5px solid var(--verdeClaro) !important;
+}
+
+.conversorParrafo {
+  text-align: center;
+}
+
+.btnDivisas {
+  color: white;
+  background: var(--azul);
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  padding: 5px 12px;
+}
+
+.imagenDivisas {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.imagen {
+  width: 150px;
+}
+
+.moneda {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moneda select {
+  padding: 10px 20px 10px 10px;
+  border: 1px solid #dedede;
+  font-size: 16px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.moneda input {
+  border: 0;
+  font-size: 30px;
+  text-align: right;
+}
+
+.taza-cambio-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cambio {
+  color: var(--negroEsp);
+  font-size: 14px;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+@media (max-width: 600px) {
+  .moneda input {
+    width: 200px;
+  }
+}
+
+.ajustesBody {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
 }

@@ -25,9 +25,64 @@
     </a>
   </header>
 
-  <body>
+  <body class="reserva-body bg-light ajustesBody">
     <!--CAMBIO DIVISAS-->
+    <div class="imagenDivisas">
+      <img src="img/divisa.svg" alt="" class="imagen">
+    </div>
+    <h1 class="mt-2">Conversor de Divisas</h1>
+    <p class="conversorParrafo">Selecciona la moneda y el Monto a consultar</p>
 
+    <div class="container-xl divisasContenedor">
+      <div class="moneda">
+        <select class="rounded-pill" id="monedaUno">
+          <option value="ARS" selected>Pesos Argentinos </option>
+          <option value="BRL">Real Brasileño</option>
+          <option value="CLP">Peso Chileno</option>
+          <option value="MXN">Peso Mexicano</option>
+          <option value="CNY">Yuan</option>
+          <option value="EUR">EURO</option>
+          <option value="GBP">Libra Esterlina</option>
+          <option value="RUB">RUBLO</option>
+          <option value="USD">USD</option>
+
+        </select>
+
+        <input type="number" id="cantidadUno" class="inputDivisa" placeholder="0" value="1">
+
+      </div>
+
+      <div class="taza-cambio-container">
+        <button class="btnDivisas" id="taza">
+          cambio
+        </button>
+
+        <div class="cambio" id="cambio"></div>
+
+      </div>
+
+      <div class="moneda">
+        <select class="rounded-pill " id="monedaDos">
+
+          <option value="ARS">Pesos Argentinos</option>
+          <option value="BRL">Real Brasileño</option>
+          <option value="CLP">Peso Chileno</option>
+          <option value="MXN">Peso Mexicano</option>
+          <option value="CNY">Yuan</option>
+          <option value="EUR">EURO</option>
+          <option value="GBP">Libra Esterlina</option>
+          <option value="RUB">RUBLO</option>
+          <option value="USD" selected>USD</option>
+
+
+
+
+        </select>
+
+        <input type="number" id="cantidadDos" class="inputDivisa" placeholder="0">
+
+      </div>
+    </div>
 
 
     <!--------------------------------------------------------------------------------------------->
@@ -53,6 +108,7 @@
     <!--------------------------------------------------------------------------------------------->
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/cDvisa.js"></script>
     <script src="js/app.js"></script>
   </body>
 

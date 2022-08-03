@@ -29,7 +29,7 @@
 
   <!--Botones Herramientas-->
 
-  <div class="container-fluid border-bottom border-top border-success bg-light">
+  <aside class="container-fluid border-bottom border-top border-success bg-light">
     <p class="text-center mt-2 rounded-pill bg-success p-2 fs-2 herramientasTitulo">Herramientas</p>
     <div class="row my-3">
 
@@ -75,7 +75,7 @@
 
       <!--------------------------------------------------------------------------------------------->
     </div>
-  </div>
+  </aside>
   <!--------------------------------------------------------------------------------------------->
 
   <!--------------------------------------------------------------------------------------------->
@@ -177,6 +177,46 @@
 
   <!----------------------------------------------------------------------------------------->
 
+  <!--MENU VISUAL   FILTROS//OCULTAR MOSTRAR-->
+  <!-- titulo+botones -->
+  <div class="tituloProductos borde-arriba container-xl mt-4">
+    <div class="me-2 mt-3">
+      <h2>Menu</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="botonesOcultar mt-3">
+      <p class="botonOcultar" id="mostrar" onclick="mostrarMenuVisual()"> + </p>
+      <p class="botonOcultar" id="ocultar" onclick="ocultarMenuVisual()"> - </p>
+    </div>
+  </div>
+
+  <section class="menu aOcultar" id="aOcultar">
+    <!-- BOTONES FILTRO -->
+    <div class="btn-container">
+
+    </div>
+    <!-- menu producto -->
+    <div class="seccionPrincipal ">
+      <!-- producto -->
+      <article class="menuProducto">
+        <img src="" alt="menu producto" class="imagenProducto" />
+        <div class="tituloProducto">
+          <header>
+            <h4>Algun producto</h4>
+            <h4 class="precioProducto">$1234</h4>
+          </header>
+          <p class="textoProducto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <!----------------------------------------------------------------------------------------->
+
   <!--CARGAR MESA-->
 
   <!-- json-server --watch db.json --port 4000-->
@@ -246,47 +286,6 @@
   </section>
 
   <!--------------------------------------------------------------------------------------------->
-
-  <!--MENU VISUAL   FILTROS//OCULTAR MOSTRAR-->
-  <!-- titulo+botones -->
-  <div class="tituloProductos borde-arriba container-xl mt-4">
-    <div class="me-2 mt-3">
-      <h2>Menu</h2>
-      <div class="underline"></div>
-    </div>
-    <div class="botonesOcultar mt-3">
-      <p class="botonOcultar" id="mostrar" onclick="mostrarMenuVisual()"> + </p>
-      <p class="botonOcultar" id="ocultar" onclick="ocultarMenuVisual()"> - </p>
-    </div>
-  </div>
-
-  <section class="menu aOcultar" id="aOcultar">
-    <!-- BOTONES FILTRO -->
-    <div class="btn-container">
-
-    </div>
-    <!-- menu producto -->
-    <div class="seccionPrincipal ">
-      <!-- producto -->
-      <article class="menuProducto">
-        <img src="" alt="menu producto" class="imagenProducto" />
-        <div class="tituloProducto">
-          <header>
-            <h4>Algun producto</h4>
-            <h4 class="precioProducto">$1234</h4>
-          </header>
-          <p class="textoProducto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-          </p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-
-  <!----------------------------------------------------------------------------------------->
-
 
   <!--RESERVAR MESA-->
 
