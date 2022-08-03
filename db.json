@@ -27,7 +27,7 @@
 
     {
       "id": 5,
-      "nombre": "Gaseosa 500 ml",
+      "nombre": "Gaseosa",
       "precio": 250,
       "categoria": 2
     },
@@ -40,7 +40,7 @@
     },
     {
       "id": 7,
-      "nombre": "Agua Saborizada 1litro",
+      "nombre": "Agua Saborizada",
       "precio": 410,
       "categoria": 2
     },
@@ -59,13 +59,13 @@
 
     {
       "id": 10,
-      "nombre": "Helado 1/4kg",
+      "nombre": "Helado",
       "precio": 350,
       "categoria": 3
     },
     {
       "id": 11,
-      "nombre": "Frutillas a la Crema",
+      "nombre": "Frutillas",
       "precio": 700,
       "categoria": 3
     },

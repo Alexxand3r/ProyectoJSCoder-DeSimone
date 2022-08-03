@@ -17,19 +17,26 @@
 
   <h1 class="text-center">Hoja de pruebas</h1>
 
-  <section class="menu">
-    <!-- title -->
-    <div class="tituloProductos">
+  <!-- titulo+botones -->
+  <div class="tituloProductos">
+    <div class="me-2">
       <h2>Menu</h2>
       <div class="underline"></div>
     </div>
-    <!-- filter buttons -->
+    <div class="botonesOcultar">
+      <p class="botonOcultar" id="mostrar" onclick="mostrarMenu()"> + </p>
+      <p class="botonOcultar" id="ocultar" onclick="ocultarMenu()"> - </p>
+    </div>
+  </div>
+
+  <section class="menu aOcultar" id="aOcultar">
+    <!-- BOTONES FILTRO -->
     <div class="btn-container">
 
     </div>
-    <!-- menu items -->
+    <!-- menu producto -->
     <div class="seccionPrincipal ">
-      <!-- single item -->
+      <!-- producto -->
       <article class="menuProducto">
         <img src="" alt="menu producto" class="imagenProducto" />
         <div class="tituloProducto">
@@ -39,8 +46,7 @@
           </header>
           <p class="textoProducto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repudiandae, sint quam. Et reprehenderit fugiat nesciunt inventore
-            laboriosam excepturi! Quo, officia.
+
           </p>
         </div>
       </article>

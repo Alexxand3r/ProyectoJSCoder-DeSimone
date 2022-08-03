@@ -19,7 +19,7 @@ const menu = [
   },
   {
     id: 3,
-    nombre: 'Hot Dogs',
+    nombre: 'Hot Dog',
     categoria: 'comidas',
     precio: 400,
     img: 'img/pancho.svg',
@@ -35,11 +35,11 @@ const menu = [
   },
   {
     id: 5,
-    nombre: 'Gaseosa 500ml',
+    nombre: 'Gaseosa',
     categoria: 'bebidas',
     precio: 250,
     img: 'img/gaseosa.svg',
-    desc: `Gaseosa 1/2 litro individual`,
+    desc: `Gaseosa 500ml individual`,
   },
   {
     id: 6,
@@ -76,15 +76,15 @@ const menu = [
   },
   {
     id: 10,
-    nombre: 'Helado 1/4 kg',
+    nombre: 'Helado',
     categoria: 'postres',
     precio: 350,
     img: 'img/helado.svg',
-    desc: `1/4 helado // 2 Sabores a elección`,
+    desc: `1/4 Kg helado // 2 Sabores a elección`,
   },
   {
     id: 11,
-    nombre: 'Frutillas a la Crema',
+    nombre: 'Frutillas',
     categoria: 'postres',
     precio: 700,
     img: 'img/frutilla.svg',
@@ -99,10 +99,10 @@ const menu = [
     desc: `Porción individual de Flan`,
   },
 ];
-// get parent element
+
 const sectionPrincipal = document.querySelector('.seccionPrincipal');
 const btnContainer = document.querySelector('.btn-container');
-// display all items when page loads
+
 window.addEventListener('DOMContentLoaded', function () {
   diplayMenuItems(menu);
   displayMenuButtons();
@@ -167,4 +167,18 @@ function displayMenuButtons() {
       }
     });
   });
+}
+
+function ocultarMenuVisual() {
+  document.getElementById('ocultar').style.display = 'none';
+  document.getElementById('mostrar').style.display = 'block';
+  document.getElementById('ocultar').style.transition = 'all 2s';
+  document.getElementById('aOcultar').style.display = 'none';
+}
+
+function mostrarMenuVisual() {
+  document.getElementById('ocultar').style.display = 'block';
+  document.getElementById('mostrar').style.display = 'none';
+  document.getElementById('mostrar').style.transition = 'all 2s';
+  document.getElementById('aOcultar').style.display = 'block';
 }

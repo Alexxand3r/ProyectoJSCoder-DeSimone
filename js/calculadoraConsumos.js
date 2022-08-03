@@ -1,5 +1,7 @@
 'use strict';
 
+//json-server --watch db.json --port 4000
+
 let cliente = {
   mesa: '',
   hora: '',
