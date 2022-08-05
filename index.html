@@ -29,9 +29,11 @@
 
   <!--Botones Herramientas-->
 
-  <aside class="container-fluid border-bottom border-top border-success bg-light">
-    <p class="text-center mt-2 rounded-pill bg-success p-2 fs-2 herramientasTitulo">Herramientas</p>
-    <div class="row my-3">
+  <p class="text-center mt-2 fs-2 herramientasTitulo">Herramientas</p>
+  <div class="underline mb-3"></div>
+  <div class="container-fluid border-bottom border-top border-success bg-light">
+
+    <div class="row mt-1">
 
 
       <!-- Boton Calculadora -->
@@ -75,7 +77,7 @@
 
       <!--------------------------------------------------------------------------------------------->
     </div>
-  </aside>
+  </div>
   <!--------------------------------------------------------------------------------------------->
 
   <!--------------------------------------------------------------------------------------------->
@@ -179,112 +181,128 @@
 
   <!--MENU VISUAL   FILTROS//OCULTAR MOSTRAR-->
   <!-- titulo+botones -->
-  <div class="tituloProductos borde-arriba container-xl mt-4">
-    <div class="me-2 mt-3">
-      <h2>Menu</h2>
-      <div class="underline"></div>
-    </div>
-    <div class="botonesOcultar mt-3">
-      <p class="botonOcultar" id="mostrar" onclick="mostrarMenuVisual()"> + </p>
-      <p class="botonOcultar" id="ocultar" onclick="ocultarMenuVisual()"> - </p>
-    </div>
-  </div>
+  <div class="container-xl borde-arriba mt-4">
+    <div class="row">
+      <div class="col-md-6">
 
-  <section class="menu aOcultar" id="aOcultar">
-    <!-- BOTONES FILTRO -->
-    <div class="btn-container">
-
-    </div>
-    <!-- menu producto -->
-    <div class="seccionPrincipal ">
-      <!-- producto -->
-      <article class="menuProducto">
-        <img src="" alt="menu producto" class="imagenProducto" />
-        <div class="tituloProducto">
-          <header>
-            <h4>Algun producto</h4>
-            <h4 class="precioProducto">$1234</h4>
-          </header>
-          <p class="textoProducto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-          </p>
+        <div class="tituloProductos mt-4">
+          <div class="me-1 mt-3">
+            <h2>Menu</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="botonesOcultar mt-2 ms-4">
+            <!-- BOTONES FILTRO -->
+            <p class="botonOcultar" id="mostrar" onclick="mostrarMenuVisual()"> + </p>
+            <p class="botonOcultar" id="ocultar" onclick="ocultarMenuVisual()"> - </p>
+          </div>
         </div>
-      </article>
-    </div>
-  </section>
 
+        <section class="menu aOcultar" id="aOcultar">
+          <!-- BOTONES FILTRO -->
+          <div class="btn-container">
 
-  <!----------------------------------------------------------------------------------------->
+          </div>
+          <!-- menu producto -->
+          <div class="seccionPrincipal ">
+            <!-- producto -->
+            <article class="menuProducto">
+              <img src="" alt="menu producto" class="imagenProducto" />
+              <div class="tituloProducto">
+                <header>
+                  <h4>Algun producto</h4>
+                  <h4 class="precioProducto">$1234</h4>
+                </header>
+                <p class="textoProducto">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
-  <!--CARGAR MESA-->
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+      <!--fin columna menu-->
 
-  <!-- json-server --watch db.json --port 4000-->
-
-
-  <!--Boton cargar mesa-->
-  <div class="mt-1">
-    <div class="d-flex my-4 justify-content-center">
-      <button data-bs-toggle="modal" data-bs-target="#formulario" type="button"
-        class="btn border border-3 border-success boton_orden rounded-pill"><span class="me-1"><img width="55"
-            src="img/menu.svg" alt="imagen menu"></span>Cargar Mesa </button>
-    </div>
-  </div>
-  <!-- Modal Cargar Mesa -->
-
-  <div class="modal fade" id="formulario">
-    <div class="modal-dialog">
-      <div class="modal-content modal_orden border border-3 border-success">
-        <div class="modal-header">
-          <h2 class="modal-title bg-info border border-3 p-2 rounded-pill ms-1"> Cargar Mesa <img width="40"
-              src="img/waiter-icon.svg" alt="icono mozo">
-          </h2>
-          <button type=" button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body bg-light">
-          <form>
-            <div class="mb-3">
-              <label class="form-label bg-success p-2 border border-3 rounded-pill"><img class="mb-2" width="35"
-                  src="img/mesa.svg" alt="icono mesa"> Mesa N° :
-              </label>
-              <input id="mesa" type="number" class="form-control rounded-pill p-2" min="1" max="8">
-            </div>
-            <div class="mb-3">
-              <label class="form-label bg-success p-2 border border-3 rounded-pill"><img width="35"
-                  src="img/fork-tiempo.svg" alt="icono tiempo de inicio"> Hora :
-              </label>
-              <input id="hora" type="time" class="form-control rounded-pill p-2">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger border border-3 rounded-pill p-3"
-            data-bs-dismiss="modal">Cerrar</button>
-          <button id="guardar-cliente" type="button" class="btn border border-3  btn-info rounded-pill p-3">Abrir
-            Mesa</button>
+      <div class="col-md-6 mt-3">
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden"><span><img
+                class="me-2" width="50" src="img/restoubicacion.svg" alt="imagen traductor"></span>algo</button>
         </div>
       </div>
+      <!----------------------------------------------------------------------------------------->
+
+      <!--CARGAR MESA-->
+
+      <!-- json-server --watch db.json --port 4000-->
+
+
+      <!--Boton cargar mesa-->
+      <div class="mt-1">
+        <div class="d-flex my-4 justify-content-center">
+          <button data-bs-toggle="modal" data-bs-target="#formulario" type="button"
+            class="btn border border-3 border-success boton_orden rounded-pill"><span class="me-1"><img width="55"
+                src="img/menu.svg" alt="imagen menu"></span>Cargar Mesa </button>
+        </div>
+      </div>
+      <!-- Modal Cargar Mesa -->
+
+      <div class="modal fade" id="formulario">
+        <div class="modal-dialog">
+          <div class="modal-content modal_orden border border-3 border-success">
+            <div class="modal-header">
+              <h2 class="modal-title bg-info border border-3 p-2 rounded-pill ms-1"> Cargar Mesa <img width="40"
+                  src="img/waiter-icon.svg" alt="icono mozo">
+              </h2>
+              <button type=" button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light">
+              <form>
+                <div class="mb-3">
+                  <label class="form-label bg-success p-2 border border-3 rounded-pill"><img class="mb-2" width="35"
+                      src="img/mesa.svg" alt="icono mesa"> Mesa N° :
+                  </label>
+                  <input id="mesa" type="number" class="form-control rounded-pill p-2" min="1" max="8">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label bg-success p-2 border border-3 rounded-pill"><img width="35"
+                      src="img/fork-tiempo.svg" alt="icono tiempo de inicio"> Hora :
+                  </label>
+                  <input id="hora" type="time" class="form-control rounded-pill p-2">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger border border-3 rounded-pill p-3"
+                data-bs-dismiss="modal">Cerrar</button>
+              <button id="guardar-cliente" type="button" class="btn border border-3  btn-info rounded-pill p-3">Abrir
+                Mesa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--contenido menu-->
+
+      <main id="menu" class="container bg-light mt-5 p-4 d-none">
+
+        <h2 class="text-center my-4">Menú</h2>
+
+        <div class="contenido"></div>
+      </main>
+
+
+      <section id="resumen" class="resumen bg-light container mt-5 p-4 d-none">
+        <h2 class="text-center my-4 rounded-pill bg-info p-1 herramientasTitulo">Resumen De Consumo </h2>
+
+        <div class="contenido row">
+          <p class="text-center">Añadir Productos al Pedido</p>
+        </div>
+      </section>
+
     </div>
+    <!--Fin row-->
   </div>
-
-  <!--contenido menu-->
-
-  <main id="menu" class="container bg-light mt-5 p-4 d-none">
-
-    <h2 class="text-center my-4">Menú</h2>
-
-    <div class="contenido"></div>
-  </main>
-
-
-  <section id="resumen" class="resumen bg-light container mt-5 p-4 d-none">
-    <h2 class="text-center my-4 rounded-pill bg-info p-1 herramientasTitulo">Resumen De Consumo </h2>
-
-    <div class="contenido row">
-      <p class="text-center">Añadir Productos al Pedido</p>
-    </div>
-  </section>
-
+  <!--fin contenedor-->
   <!--------------------------------------------------------------------------------------------->
 
   <!--RESERVAR MESA-->

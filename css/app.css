@@ -226,7 +226,8 @@ svg {
 
 /* HERRAMIENTAS */
 .herramientasTitulo {
-  color: white;
+  color: var(--negroEsp);
+  margin-bottom: 0;
 }
 
 .letraNegra {
