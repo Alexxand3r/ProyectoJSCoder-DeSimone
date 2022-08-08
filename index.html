@@ -36,13 +36,11 @@
     <div class="row mt-1">
 
 
-      <!-- Boton Calculadora -->
+      <!-- Boton Algo -->
 
       <div class="col-md-3 mb-1">
-        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-          aria-controls="offcanvasScrolling"
-          class="w-100 border border-3 border-success rounded-pill  boton_orden"><span class="me-2"><img width="50"
-              src="img/calculator.svg" alt="imagen Calculadora"></span>Calculadora</button>
+        <button type="button" class="w-100 border border-3 border-success rounded-pill  boton_orden"><span
+            class="me-2"><img width="50" src="img/restoubicacion.svg" alt="imagen Calculadora"></span>algo</button>
       </div>
 
       <!----------------------------------------------------------------------------------------->
@@ -52,128 +50,123 @@
 
       <div class="col-md-3 mb-2">
         <a href="cotizadorDivisas.html"> <button type="button"
-            class="btn border border-3 border-success boton_orden rounded-pill w-100"><img class="me-2" width="50"
+            class="btn border border-3 border-success boton_orden rounded-pill w-100 fs-3"><img class="me-2" width="50"
               src="img/divisa.svg" alt="imagen cambio de divisas">Cambio divisas</button></a>
       </div>
 
       <!--------------------------------------------------------------------------------------------->
 
-      <!--Boton Traductor-->
-
-      <div class="col-md-3 mb-2">
-        <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden w-100"><span><img
-              class="me-2" width="50" src="img/traductor.svg" alt="imagen traductor"></span>Traductor</button>
-      </div>
-
-      <!--------------------------------------------------------------------------------------------->
 
       <!--Boton agregar notas-->
 
       <div class="col-md-3 mb-2">
-        <button class="w-100 btn border border-3 border-success boton_orden rounded-pill" type="button"
+        <button class="w-100 btn border border-3 border-success boton_orden rounded-pill fs-3" type="button"
           data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><span><img
               width="50" src="img/notas.svg" alt="Boton notas"></span>NOTAS</button>
       </div>
 
+
       <!--------------------------------------------------------------------------------------------->
-    </div>
-  </div>
-  <!--------------------------------------------------------------------------------------------->
 
-  <!--------------------------------------------------------------------------------------------->
+      <!--OFFCANVAS AGREGAR NOTAS-->
+      <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header bg-light my-0">
+          <label for="notas" id="offcanvasBottomLabel">
+            <h5 class="mb-0 fs-5 offcanvas-title bg-success p-2 rounded-pill">Notas:</h5>
+          </label>
 
-  <!--OFF CANVAS CALCULADORA-->
-
-  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-    <div class="offcanvas-header bg-light">
-      <h5 class="offcanvas-title fs-4 dark bg-success p-2 rounded-pill ms-3" id="offcanvasScrollingLabel"> No
-        Pierdas
-        la
-        Cuenta!! 😁
-      </h5>
-      <button type="button" class="btn-close bg-success btn-success" data-bs-dismiss="offcanvas"
-        aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body contenedor_calculadora bg-light">
-      <div class="calculadora">
-        <div class="pantalla_calculadora" id="calculadoraFondo">
-          <span id="display">0</span>
+          <button type="button" class="btn-close btn-success active" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
+        <div class="offcanvas-body small mt-1 pt-0" id="contenido">
+          <div class="container-xl">
+            <div class="row">
 
-        <button class="col_2-calculadora" id="borrarDisplay">C</button>
-        <button class="borrar_calculadora" alt="porcentaje" id="porcentaje">%</button>
+              <div class="col-md-6">
+                <form id="formulario-notas">
 
-        <button class="operador_calculadora" alt="dividido" id="dividido">/</button>
-        <button class="numero_calculadora" alt="7" id="siete">7</button>
-        <button class="numero_calculadora" alt="8" id="ocho">8</button>
-        <button class="numero_calculadora" alt="9" id="nueve">9</button>
-        <button class="operador_calculadora" alt="por" multiplica" id="por">x</button>
-        <button class="numero_calculadora" alt="4" id="cuatro">4</button>
-        <button class="numero_calculadora" alt="5" id="cinco">5</button>
-        <button class="numero_calculadora" alt="6" id="seis">6</button>
-        <button class="operador_calculadora" alt="menos" id="menos">-</button>
-        <button class="numero_calculadora" alt="1" id="uno">1</button>
-        <button class="numero_calculadora" alt="2" id="dos">2</button>
-        <button class="numero_calculadora" alt="3" id="tres">3</button>
-        <button class="operador_calculadora" alt="mas" id="mas">+</button>
-        <button class="numero_calculadora " alt="0" id="cero">0</button>
-        <button class="numero_calculadora" alt="punto" id="punto">.</button>
-        <button class="resultado_calculadora col_2-calculadora" alt="igual" id="igual">=</button>
+                  <label for="notas"></label>
 
+                  <textarea id="notas" rows="5" class="w-100 border border-3 border-success"></textarea>
+
+                  <input type="submit" class="btn-info  border border-3 border-info  w-100 rounded-pill mb-2 p-1"
+                    value="Agregar">
+                </form>
+              </div>
+
+              <div class="col-md-6">
+
+                <h2 class="mb-0 fs-4 bg-info p-1 rounded-pill">Notas/Tareas</h2>
+
+                <div class="mt-4" id="lista-notas"></div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+        <!--#contenido-->
       </div>
-    </div>
-  </div>
 
-  <!--------------------------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------------------------->
+      <!--Boton clima-->
 
-  <!--OFFCANVAS AGREGAR NOTAS-->
-  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-    <div class="offcanvas-header bg-light my-0">
-      <label for="notas" id="offcanvasBottomLabel">
-        <h5 class="mb-0 fs-5 offcanvas-title bg-success p-2 rounded-pill">Notas:</h5>
-      </label>
+      <div class="col-md-3">
+        <button type="button"
+          class="mostrarModal w-100 btn boton_orden  border border-3 border-success rounded-pill"><span><img
+              class="me-2" width="50" src="img/clima.svg" alt="imagen Clima"></span>Clima</button>
+        <div class="ventanaModal container-xl containerClima bg-light ocultar">
 
-      <button type="button" class="btn-close btn-success active" data-bs-dismiss="offcanvas"
-        aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body small mt-1 pt-0" id="contenido">
-      <div class="container-xl">
-        <div class="row">
+          <button class="cerrarModal">&times;</button>
 
-          <div class="col-md-6">
-            <form id="formulario-notas">
+          <h1 id="titulo" class="text-info fw-bold  text-center">Consulta el Clima <img class="mb-3" src="img/clima.svg"
+              alt="imagen clima" width="55"></h1>
 
-              <label for="notas"></label>
 
-              <textarea id="notas" rows="5" class="w-100 border border-3 border-success"></textarea>
-
-              <input type="submit" class="btn-info  border border-3 border-info  w-100 rounded-pill mb-2 p-1"
-                value="Agregar">
+          <div class="p-4">
+            <div id="resultadoClima">
+              <p class="text-center">Ingresa tu ciudad y selecciona tu país</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 ">
+              <form id="formularioClima" class="mt-1" action="#" method="POST">
+                <div class="mt-5"><label class="fs-2 mx-4" for="">Ciudad:</label>
+                  <input type="text" name="ciudad" id="climaCiudad" placeholder="Escribe tu Ciudad"
+                    class="p-3 rounded-pill" />
+                </div>
+            </div>
+            <div class="col-md-7">
+              <div class="mt-5">
+                <label class="fs-2 mx-4" for="">Pais:</label>
+                <select class="ms-4 border border-info text-info py-3 px-4 rounded-pill" id="climaPais">
+                  <option disabled selected value="">-- Seleccione --</option>
+                  <option value="AR">Argentina</option>
+                  <option value="CL">Chile</option>
+                  <option value="UY">Uruguay</option>
+                  <option value="PE">Perú</option>
+                  <option value="BR">Brasil</option>
+                  <option value="ES">España</option>
+                  <option value="US">Estados Unidos</option>
+                </select>
+              </div>
+            </div>
+            <div class="btnClima">
+              <input type="submit" class="mt-5 bg-success p-3 text-white text-uppercase fw-bold rounded-pill"
+                value="Obtener Clima" />
+            </div>
             </form>
           </div>
 
-          <div class="col-md-6">
 
-            <h2 class="mb-0 fs-4 bg-info p-1 rounded-pill">Notas/Tareas</h2>
-
-            <div class="mt-4" id="lista-notas"></div>
-
-          </div>
-
-
+          <div class="ocultar"></div>
         </div>
-
       </div>
     </div>
-    <!--#contenido-->
   </div>
-
-  <!--TRADUCTOR-->
-
-
-
-
+  <!--------------------------------------------------------------------------------------------->
 
 
 
@@ -223,12 +216,65 @@
       </div>
       <!--fin columna menu-->
 
-      <div class="col-md-6 mt-3">
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn  border border-3 border-success rounded-pill  boton_orden"><span><img
-                class="me-2" width="50" src="img/restoubicacion.svg" alt="imagen traductor"></span>algo</button>
+      <!--------------------------------------------------------------------------------------------->
+
+
+
+      <!--------------           CALCULADORA ------------------------------------------------------------------------------->
+
+      <div class="col-md-6">
+        <div class="btnCalculadora">
+          <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"
+            class="border border-3 border-success rounded-pill fs-4  boton_orden"><span class="me-2"><img width="50"
+                src="img/calculator.svg" alt="imagen Calculadora"></span>Calculadora</button>
         </div>
       </div>
+      <!--------------------------------------------------------------------------------------------->
+
+      <!--OFF CANVAS CALCULADORA-->
+
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header bg-light">
+          <h5 class="offcanvas-title fs-4 dark bg-success p-2 rounded-pill ms-2" id="offcanvasScrollingLabel"> No
+            Pierdas
+            la
+            Cuenta!! 😁
+          </h5>
+          <button type="button" class="btn-close bg-success btn-success" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body contenedor_calculadora bg-light">
+          <div class="calculadora">
+            <div class="pantalla_calculadora" id="calculadoraFondo">
+              <span id="display">0</span>
+            </div>
+
+            <button class="col_2-calculadora" id="borrarDisplay">C</button>
+            <button class="borrar_calculadora" alt="porcentaje" id="porcentaje">%</button>
+
+            <button class="operador_calculadora" alt="dividido" id="dividido">/</button>
+            <button class="numero_calculadora" alt="7" id="siete">7</button>
+            <button class="numero_calculadora" alt="8" id="ocho">8</button>
+            <button class="numero_calculadora" alt="9" id="nueve">9</button>
+            <button class="operador_calculadora" alt="por" multiplica" id="por">x</button>
+            <button class="numero_calculadora" alt="4" id="cuatro">4</button>
+            <button class="numero_calculadora" alt="5" id="cinco">5</button>
+            <button class="numero_calculadora" alt="6" id="seis">6</button>
+            <button class="operador_calculadora" alt="menos" id="menos">-</button>
+            <button class="numero_calculadora" alt="1" id="uno">1</button>
+            <button class="numero_calculadora" alt="2" id="dos">2</button>
+            <button class="numero_calculadora" alt="3" id="tres">3</button>
+            <button class="operador_calculadora" alt="mas" id="mas">+</button>
+            <button class="numero_calculadora " alt="0" id="cero">0</button>
+            <button class="numero_calculadora" alt="punto" id="punto">.</button>
+            <button class="resultado_calculadora col_2-calculadora" alt="igual" id="igual">=</button>
+
+          </div>
+        </div>
+      </div>
+
       <!----------------------------------------------------------------------------------------->
 
       <!--CARGAR MESA-->
@@ -240,7 +286,7 @@
       <div class="mt-1">
         <div class="d-flex my-4 justify-content-center">
           <button data-bs-toggle="modal" data-bs-target="#formulario" type="button"
-            class="btn border border-3 border-success boton_orden rounded-pill"><span class="me-1"><img width="55"
+            class="btn border border-3 border-success boton_orden rounded-pill fs-3"><span class="me-1"><img width="55"
                 src="img/menu.svg" alt="imagen menu"></span>Cargar Mesa </button>
         </div>
       </div>
@@ -408,6 +454,7 @@
   <script src="js/menuProductos.js"></script>
   <script src="js/calculadoraConsumos.js"></script>
   <script src="js/calculadora.js"></script>
+  <script src="js/clima.js"></script>
   <script src="js/reservaMesa.js"></script>
 </body>
 

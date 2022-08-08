@@ -1,22 +1,31 @@
 'use strict';
 
-// DARK MODE
+//VENTANA MODAL
 
-const darkMode = document.getElementById('darkMode');
+const ventanaModal = document.querySelector('.ventanaModal');
+const cubrirModal = document.querySelector('.cubrirModal');
+const btnCerrarModal = document.querySelector('.cerrarModal');
+const btnsAbrirModal = document.querySelectorAll('.mostrarModal');
 
-function cambiarModo() {
-  if (!body.classList.contains('dark')) {
-    darkMode.innerText = 'Dark';
-    darkMode.classList.remove('btn-secondary');
-    darkMode.classList.add('btn-light');
-  } else {
-    darkMode.innerText = 'Light';
-    darkMode.classList.remove('btn-light');
-    darkMode.classList.add('btn-secondary');
-  }
-  body.classList.toggle('dark');
-  document.getElementsByClassName('table')[0].classList.toggle('dark');
+//console.log(btnsAbrirModal);
+
+const abrirModal = function () {
+  //console.log('probando click');
+  ventanaModal.classList.remove('ocultar');
+  cubrirModal.classList.remove('ocultar');
+};
+
+const cerrarModal = function () {
+  ventanaModal.classList.add('ocultar');
+  cubrirModal.classList.add('ocultar');
+};
+
+for (let i = 0; i < btnsAbrirModal.length; i++) {
+  btnsAbrirModal[i].addEventListener('click', abrirModal);
 }
+
+btnCerrarModal.addEventListener('click', cerrarModal);
+cubrirModal.addEventListener('click', cerrarModal);
 
 /*
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
