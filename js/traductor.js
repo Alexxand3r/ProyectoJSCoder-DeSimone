@@ -9,6 +9,7 @@ const fromText = document.querySelector('.fromText');
 const toText = document.querySelector('.toText');
 const change = document.getElementById('change');
 const reades = document.querySelectorAll('.read');
+const listen = document.querySelector('.listen');
 
 const language1 = 'en-GB';
 const language2 = 'es-ES';
@@ -53,6 +54,9 @@ translate.addEventListener('click', async _ => {
   toText.value = data.responseData.translatedText;
 });
 
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
 reades.forEach((read, index) => {
   read.addEventListener('click', _ => {
     const textToRead = index == 0 ? fromText.value : toText.value;
@@ -61,4 +65,12 @@ reades.forEach((read, index) => {
     if (!textToRead) return;
     speechSynthesis.speak(new SpeechSynthesisUtterance(textToRead));
   });
+});
+
+recognition.onresult = event => {
+  fromText.value = event.results[0][0].transcript;
+};
+
+listen.addEventListener('click', _ => {
+  recognition.start();
 });
