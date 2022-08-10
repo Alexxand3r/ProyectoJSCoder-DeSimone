@@ -1,0 +1,19 @@
+{
+  "name": "proyectojs-coderhouse",
+  "version": "1.0.0",
+  "description": "Proyecto Javascript ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexxand3r/ProyectoJSCoder-DeSimone.git"
+  },
+  "author": "Alexander De Simone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexxand3r/ProyectoJSCoder-DeSimone/issues"
+  },
+  "homepage": "https://github.com/Alexxand3r/ProyectoJSCoder-DeSimone#readme"
+}

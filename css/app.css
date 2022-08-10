@@ -31,7 +31,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .header {
@@ -48,7 +48,7 @@ a {
 }
 
 footer {
-  margin-top: 7rem;
+  margin-top: 3rem;
   background-color: var(--negroEsp);
 }
 
@@ -738,4 +738,80 @@ button:focus {
   40% {
     opacity: 1;
   }
+}
+
+/* TRADUCTOR */
+
+#tituloTraductor {
+  font-weight: 600;
+}
+
+.containerTraductor {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.containerTraductor > div {
+  width: 850px;
+  height: 550px;
+  background: #fff;
+  border: 2px solid var(--verdeClaro);
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 15% 75% 10%;
+}
+
+.containerTraductor > div .traductorHeader {
+  display: grid;
+  grid-template-columns: calc(45% - 10px) 10% calc(45% - 10px);
+  gap: 10px;
+}
+
+.traductorHeader select {
+  margin-top: 1rem;
+  border: 0;
+  background: none;
+  outline: none;
+}
+
+.iconButton {
+  border: 0;
+  background: none;
+  font-size: 15px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.containerTextArea {
+  height: 95%;
+  display: grid;
+  grid-template-columns: 50% 49%;
+}
+
+textarea {
+  width: 100%;
+  height: 90%;
+  font-size: 30px;
+  outline: none !important;
+  resize: none !important;
+  background: none;
+  border-radius: 5px;
+}
+
+.translate {
+  color: var(--blancEsp);
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 25px;
+}
+.botonInicio {
+  display: flex;
+  justify-content: end;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  font-weight: bold;
 }

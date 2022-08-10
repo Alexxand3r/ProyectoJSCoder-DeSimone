@@ -5,32 +5,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProyectoJS CoderHouse</title>
+  <title>Cotizador Divisas </title>
   <link rel="shortcut icon" href="img/js-icono.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/app.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body id="body" class="">
 
-  <!-- header-->
-  <header class="py-4 header border border-3 border-success">
-    <a href="index.html">
-      <h1 class="text-center text-white fs-1">Waiter App <span class="icono_logo rounded-circle"><img width="45"
-            src="img/waitress.svg" alt="icono mozo"></span>
-      </h1>
-    </a>
-  </header>
-
   <body class="reserva-body bg-light ajustesBody">
+
+    <!-- header-->
+    <header class="py-4 header border border-3 border-success">
+
+      <a href="index.html">
+        <h1 class="text-center text-white fs-1">Waiter App <span class="icono_logo rounded-circle"><img width="45"
+              src="img/waitress.svg" alt="icono mozo"></span>
+        </h1>
+      </a>
+    </header>
+
     <!--CAMBIO DIVISAS-->
-    <div class="imagenDivisas">
-      <img src="img/divisa.svg" alt="" class="imagen">
+
+    <div class="botonInicio fs-5">
+      <a href="index.html"><button class="boton_orden"><img width="45" src="img/restoubicacion.svg"
+            alt="icono mozo">Inicio</button></a>
     </div>
-    <h1 class="mt-2">Conversor de Divisas</h1>
+    <h1 class="mt-3 text-info">Cambio de Divisas <img src="img/divisa.svg" alt="imagen divisas" class="ms-2" width="70">
+    </h1>
+    <div class="underline mb-4"></div>
     <p class="conversorParrafo">Selecciona la moneda y el Monto a consultar</p>
 
     <div class="container-xl divisasContenedor">
@@ -83,7 +90,6 @@
 
       </div>
     </div>
-
 
     <!--------------------------------------------------------------------------------------------->
 

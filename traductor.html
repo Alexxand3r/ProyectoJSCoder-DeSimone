@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traductor Idiomas</title>
+  <link rel="shortcut icon" href="img/js-icono.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
+</head>
+
+
+<body class="bg-light">
+  <div class="">
+    <!-- header-->
+
+    <header class="py-4 header border border-3 border-success">
+      <a href="index.html">
+        <h1 class="text-center text-white fs-1">Waiter App <span class="icono_logo rounded-circle"><img width="45"
+              src="img/waitress.svg" alt="icono mozo"></span>
+        </h1>
+      </a>
+    </header>
+    <div class="botonInicio fs-5">
+      <a href="index.html"><button class="boton_orden"><img width="45" src="img/restoubicacion.svg"
+            alt="icono mozo">Inicio</button></a>
+    </div>
+    <h1 id="tituloTraductor" class="text-info fw-bold  text-center fs-1">Traductor<img class="ms-2 my-2"
+        src="img/traductor.svg" alt="imagen clima" width="70"></h1>
+
+    <div class="underline mb-4"></div>
+
+
+    <div class="containerTraductor">
+      <div>
+        <div class="traductorHeader">
+          <select class="first">
+          </select>
+          <button class="iconButton bg-info rounded-pill" id="change"><i class="fas fa-exchange-alt"></i></button>
+          <select class="second"></select>
+        </div>
+        <div class="containerTextArea">
+          <div class="me-2">
+            <textarea class="fromText mt-2" placeholder="Ingresa el Texto"></textarea>
+            <div>
+              <button class="read iconButton"><i class="fas fa-volume-up"></i></button>
+              <button class="listen iconButton"><i class="fas fa-microphone"></i></button>
+            </div>
+          </div>
+          <div>
+            <textarea class="toText mt-2 ms-2" placeholder="Ingresa el Texto"></textarea>
+            <div class="">
+              <button class="read iconButton"><i class="fas fa-volume-up"></i></button>
+            </div>
+          </div>
+        </div>
+        <button class="translate bg-info mt-2">Traducir</button>
+      </div>
+    </div>
+
+    <footer class="border-top">
+      <div class="container-xl">
+        <div class="row">
+
+          <div class="col-md-6 mt-2">
+            <img class="img-fluid" src="img/unnamed.png" alt="logo CoderHouse">
+          </div>
+
+          <div class="col-md-6 d-flex align-items-center">
+            <h3 class="me-4 mt-4 text-white fs-2">Alexander De Simone</h3>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="js/traductor.js" type="module"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/8cbe0dc0aa.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
